@@ -1,4 +1,5 @@
 from asyncio.windows_events import NULL
+from ipaddress import ip_address
 from operator import methodcaller
 from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
@@ -20,6 +21,9 @@ class User(UserMixin, db.Model):  #The UserMixin will add Flask-Login attributes
     id = db.Column(db.Integer, primary_key=True, autoincrement=True) # primary keys are required by SQLAlchemy
     username = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
+class IPADDRESS(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    IPaddress = db.Column(db.String(100))
 with app.app_context():
     db.create_all()
 
@@ -36,10 +40,12 @@ def load_user(user_id):
 
 @app.route("/login")
 def login():
-    if(current_user!=NULL):
+    try:
+        p = current_user.username
         flash("Already logged in!")
         return redirect(url_for('home'))
-    return render_template("adminLogin.html")
+    except:
+        return render_template("adminLogin.html")
 
 @app.route("/loginv", methods=['POST'])
 def loginv():
@@ -51,6 +57,9 @@ def loginv():
     if not fetch_user or not check_password_hash(fetch_user.password, password):
         flash("Please check your login credentials and try again!")
         return redirect(url_for('login'))
+    new_ip = IPADDRESS(IPaddress = request.remote_addr)
+    db.session.add(new_ip)
+    db.session.commit()
     login_user(fetch_user, remember=remember)
     return redirect(url_for('home'))
 
@@ -80,7 +89,7 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
-@app.route("/")
+#@app.route("/")
 @app.route("/home")
 @login_required
 def home():
