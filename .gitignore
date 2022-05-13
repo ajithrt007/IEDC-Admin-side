@@ -161,4 +161,4 @@ cython_debug/
 
 
 #database need only to be pushed at the final hosting stage
-db.sqlite
+#db.sqlite

@@ -5,6 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>New admin</title>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="notification is-danger">
+        {{ messages[0] }}. Go to <a href="{{ url_for('login') }}">login page</a>.
+    </div>
+    {% endif %}
+    {% endwith %}
     {% if flag==0 %}
     <form method="post" action="/createadmin">
         <div class="container">

@@ -95,6 +95,17 @@
         </div>
     </div>
     <div class="site_analytics">
+        <p>Welcome {{name}}</p>
+        {% if current_user.is_authenticated %}
+        <a href="{{url_for('logout')}}"> Logout </a>
+        {% endif %}
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}.
+            </div>
+            {% endif %}
+        {% endwith %}
         <p class="site-analytics headline">Site Analytics</p>
         <div class="site-numberdata">
             <p class="number-numberdata" data-n="1043">1043</p>

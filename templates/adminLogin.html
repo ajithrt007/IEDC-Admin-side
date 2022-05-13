@@ -27,19 +27,26 @@
     <div class="rightSide">
         <div class="rightContent">
             <p class="heading">Admin Login</p>
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="notification is-danger">
+                {{ messages[0] }}. Go to <a href="{{ url_for('login') }}">login page</a>.
+            </div>
+            {% endif %}
+            {% endwith %}
+            <form method="post" action="/loginv">
             <div class="textBoxes">
-                <form method="post" action="/verify">
                 <div class="textBox">
                     <p class="fieldName">Username</p>
-                    <input type="text" class="inputBox">
+                    <input type="text" name="username" class="inputBox">
                 </div>
                 <div class="textBox">
                     <p class="fieldName">Password</p>
-                    <input type="text" class="inputBox">
+                    <input type="password" name="password" class="inputBox">
                 </div>
-                </form>
             </div>
-            <button type="button" class="btn btn-success login">Login</button>
+            <button type="submit" class="btn btn-success login">Login</button>
+            </form>
         </div>
     </div>
     <div class="mobDisplay">

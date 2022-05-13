@@ -1,5 +1,10 @@
-from flask import Flask, render_template
+from asyncio.windows_events import NULL
+from operator import methodcaller
+from flask import Flask, render_template, request, redirect, url_for, flash
 from flask_sqlalchemy import SQLAlchemy
+#libraries for password hashing
+from werkzeug.security import generate_password_hash, check_password_hash
+from flask_login import LoginManager, UserMixin, current_user, login_manager, login_required, login_user, logout_user
 
 app = Flask(__name__)
 #initialisation of sqlalchemy
@@ -11,25 +16,75 @@ app.config['SECRET_KEY'] = 'chakka is a very good fruit'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 ########################################################################
 db.init_app(app)
-class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True, auto_increment=True) # primary keys are required by SQLAlchemy
+class User(UserMixin, db.Model):  #The UserMixin will add Flask-Login attributes to the model so that Flask-Login will be able to work with it.
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True) # primary keys are required by SQLAlchemy
     username = db.Column(db.String(100), unique=True)
     password = db.Column(db.String(100))
 with app.app_context():
     db.create_all()
 
+#getting the user logged in info
+login_manager = LoginManager()
+login_manager.login_view='login'
+login_manager.init_app(app)
+
+@login_manager.user_loader
+def load_user(user_id):
+    # since the user_id is just the primary key of our user table, use it in the query for the user
+    return User.query.get(int(user_id))
+
+
 @app.route("/login")
 def login():
+    if(current_user!=NULL):
+        flash("Already logged in!")
+        return redirect(url_for('home'))
     return render_template("adminLogin.html")
+
+@app.route("/loginv", methods=['POST'])
+def loginv():
+    username = request.form.get("username")
+    password = request.form.get("password")
+    remember = False  #can be used in the future to include the remember me functionality
+    print(username, password)
+    fetch_user = User.query.filter_by(username=username).first()
+    if not fetch_user or not check_password_hash(fetch_user.password, password):
+        flash("Please check your login credentials and try again!")
+        return redirect(url_for('login'))
+    login_user(fetch_user, remember=remember)
+    return redirect(url_for('home'))
 
 @app.route("/admin-signup")
 def adsign():
-    return render_template("signin.html", flag = 1)
+    return render_template("signin.html", flag = 0)
+
+#route for accepting the new admin sign in requests
+@app.route("/createadmin", methods=['POST'])
+def createadmin():
+    username = request.form.get("username")
+    password = request.form.get("pass")
+    print(username, password)
+    user = User.query.filter_by(username = username).first()
+    if user:
+        flash("Admin with that particular position already exists")
+        return redirect(url_for('adsign'))
+    else:
+        new_user = User(username=username, password=generate_password_hash(password, method='sha256'))
+        db.session.add(new_user)
+        db.session.commit()
+        return redirect(url_for('home'))
+
+@app.route("/logout")
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('login'))
 
 @app.route("/")
 @app.route("/home")
+@login_required
 def home():
-    return render_template("main.html")
+    return render_template("main.html", name = current_user.username)
 
 
 if __name__ == "__main__":
