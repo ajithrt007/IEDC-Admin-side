@@ -1,11 +1,14 @@
 from asyncio.windows_events import NULL
 from ipaddress import ip_address
+from itertools import count
 from operator import methodcaller
 from flask import Flask, render_template, request, redirect, url_for, flash
-from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import Model, SQLAlchemy
 #libraries for password hashing
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, current_user, login_manager, login_required, login_user, logout_user
+import datetime
+import counttry
 
 app = Flask(__name__)
 #initialisation of sqlalchemy
@@ -24,6 +27,13 @@ class User(UserMixin, db.Model):  #The UserMixin will add Flask-Login attributes
 class IPADDRESS(db.Model):
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     IPaddress = db.Column(db.String(100))
+    #sqlite does not have the provision to store date and time, so we use string for it
+    dandt = db.Column(db.String(100))
+class Visitors(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    count = db.Column(db.Integer)
+    def __init__(self):
+        self.count = 0
 with app.app_context():
     db.create_all()
 
@@ -43,7 +53,7 @@ def login():
     try:
         p = current_user.username
         flash("Already logged in!")
-        return redirect(url_for('home'))
+        return redirect(url_for('admin'))
     except:
         return render_template("adminLogin.html")
 
@@ -57,11 +67,21 @@ def loginv():
     if not fetch_user or not check_password_hash(fetch_user.password, password):
         flash("Please check your login credentials and try again!")
         return redirect(url_for('login'))
-    new_ip = IPADDRESS(IPaddress = request.remote_addr)
+    #to log the ip address and , date and time of logging in as admin
+    currentDateTime = datetime.datetime.now()
+    new_ip = IPADDRESS(IPaddress = request.remote_addr, dandt = currentDateTime)
     db.session.add(new_ip)
     db.session.commit()
+    #to increment the number of visitors
+    v = Visitors.query.first()
+    if not v:
+        v = Visitors()
+        v.count += 1
+        db.session.add(v)
+    v.count += 1
+    db.session.commit()
     login_user(fetch_user, remember=remember)
-    return redirect(url_for('home'))
+    return redirect(url_for('admin'))
 
 @app.route("/admin-signup")
 def adsign():
@@ -81,7 +101,7 @@ def createadmin():
         new_user = User(username=username, password=generate_password_hash(password, method='sha256'))
         db.session.add(new_user)
         db.session.commit()
-        return redirect(url_for('home'))
+        return redirect(url_for('admin'))
 
 @app.route("/logout")
 @login_required
@@ -89,11 +109,19 @@ def logout():
     logout_user()
     return redirect(url_for('login'))
 
-#@app.route("/")
-@app.route("/home")
-@login_required
+@app.route("/")
 def home():
-    return render_template("main.html", name = current_user.username)
+    v = Visitors.query.first()
+    v.count += 1
+    db.session.add(v)
+    db.session.commit()
+    return render_template("main.html", visitor = v.count)
+
+@app.route("/admin")
+@login_required
+def admin():
+    v = Visitors.query.first().count
+    return render_template("main.html", name = current_user.username, visitor = v)
 
 
 if __name__ == "__main__":
