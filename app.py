@@ -8,7 +8,6 @@ from flask_sqlalchemy import Model, SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import LoginManager, UserMixin, current_user, login_manager, login_required, login_user, logout_user
 import datetime
-import counttry
 
 app = Flask(__name__)
 #initialisation of sqlalchemy
@@ -18,6 +17,7 @@ db = SQLAlchemy()
 #setting all the configuration keys
 app.config['SECRET_KEY'] = 'chakka is a very good fruit'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+app.config['GALLERY_IMAGE_DEST'] = '../static/images/Gallery/'
 ########################################################################
 db.init_app(app)
 class User(UserMixin, db.Model):  #The UserMixin will add Flask-Login attributes to the model so that Flask-Login will be able to work with it.
@@ -34,6 +34,15 @@ class Visitors(db.Model):
     count = db.Column(db.Integer)
     def __init__(self):
         self.count = 0
+class Header(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    section = db.Column(db.String(100), unique=True)
+    description = db.Column(db.String(10000))
+class Gallery(db.Model):
+    id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    name = db.Column(db.String(100), unique=True)
+
+
 with app.app_context():
     db.create_all()
 
@@ -115,13 +124,35 @@ def home():
     v.count += 1
     db.session.add(v)
     db.session.commit()
-    return render_template("main.html", visitor = v.count)
+    g = Gallery.query.all()
+    return render_template("main.html", visitor = v.count, gimages = g)
 
 @app.route("/admin")
 @login_required
 def admin():
     v = Visitors.query.first().count
     return render_template("main.html", name = current_user.username, visitor = v)
+
+@app.route("/deletefilegallery", methods=['POST'])
+@login_required
+def deletefilegallery():
+    pass
+
+"""@app.route("/uploadfilegallery", methods=['POST'])
+@login_required
+def uploadfilegallery():
+    if 'file' not in request.files:
+        flash("No file part!")
+        return redirect(request.url)
+    file = request.files['file']
+    # if user does not select file, browser also
+    # submit a empty part without filename
+    if file.filename == '':
+        flash('No selected file')
+        return redirect(request.url)
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))"""
 
 
 if __name__ == "__main__":
