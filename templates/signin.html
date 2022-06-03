@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New admin</title>
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <div class="notification is-danger">
+        {{ messages[0] }}. Go to <a href="{{ url_for('login') }}">login page</a>.
+    </div>
+    {% endif %}
+    {% endwith %}
+    {% if flag==0 %}
+    <form method="post" action="/createadmin">
+        <div class="container">
+            <div class="username">
+                <label for="username">Enter your username(Position you are holding)</label>
+                <input type="text" name="username">
+            </div>
+            <div class="pass">
+                <label for="password">Enter the password</label>
+                <input type="password" name="pass">
+            </div>
+            <button type="submit">Create new admin</button>
+        </div>
+    </form>
+    {% else %}
+    <h3>Access to this url is currently disabled by the admin!</h3>
+    {% endif %}
+</head>
+<body>
+    
+</body>
+</html>
