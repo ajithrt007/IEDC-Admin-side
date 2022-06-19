@@ -830,3 +830,10 @@ input:focus {
     height: 50vh;
     width: 25vw;
 }
+.anandhunte-kalaviruth{
+    margin-left: 5vw;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    font-size: 25px;
+    color: green;
+}

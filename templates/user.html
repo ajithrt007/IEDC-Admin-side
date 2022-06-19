@@ -62,196 +62,33 @@
                 <p class="field_name">Execom Members</p>
                 <div class="square"><div class="number" data-n="7">0</div></div>
             </div>
-            <button class="edit-icon position1" data-toggle="modal" data-target="#editNumericalData"><img src="../static/icons/edit-icon-pen.svg" class="pen"></button>
-             <!-- Modal -->
-             <div class="modal fade" id="editNumericalData" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Edit</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <input type="text" class="editTitle" value="Founding Year">
-                            <input type="text" class="editTitle" value="2015">
-                            <input type="text" class="editTitle" value="No of Start-ups">
-                            <input type="text" class="editTitle" value="12">
-                            <input type="text" class="editTitle" value="Active Members">
-                            <input type="text" class="editTitle" value="50">
-                            <input type="text" class="editTitle" value="Execom Members">
-                            <input type="text" class="editTitle" value="7">
-                            
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Modal End-->
-        </div>
-    </div>
-    <div class="site_analytics">
-        <p class="anandhunte-kalaviruth">Welcome {{name}}</p>
-        {% if current_user.is_authenticated %}
-        <a href="{{url_for('logout')}}"> Logout </a>
-        {% endif %}
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-            <div class="notification is-danger">
-                {{ messages[0] }}.
-            </div>
-            {% endif %}
-        {% endwith %}
-        <p class="site-analytics headline">Site Analytics</p>
-        <div class="site-numberdata">
-            <p class="number-numberdata" data-n="1043">{{visitor}}</p>
-            <p class="numberdetails">Site Visits</p>
-            <form name="frmsquare">
-                <select size=1 name="cbostate" class="dropdown">
-                    <option>Till Now</option>
-                    <option>Today</option>
-                    <option>Yesterday</option>
-                    <option>Last Week</option>
-                    <option>Current Month</option>
-                    <option>Today</option>
-                    <option>Last Month</option>
-                    <option>Last 6 Months</option>
-               </select>
-           </form>
         </div>
     </div>
     <div class="aboutIEDC">
         <div class="titleAndContent">
             <div class="titleAndEditIcon">
                 <h2 class="aboutTitle">Vision</h2>
-                <button class="edit-icon" data-toggle="modal" data-target="#vision"><img src="../static/icons/edit-icon-pen.svg" class="pen"></button>
+                
             </div>
             <p class="aboutContent">To develop a knowledge ecosystem with required infrastructure that can enable students and faculty to innovate and prototype their potential ideas with support from government, industry and reputed academic institutions around the world and help them to realize their potentials.</p>
-            <!-- Modal -->
-            <div class="modal fade" id="vision" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Edit</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <input type="text" class="editTitle" value="Vision">
-                            <textarea name="w3review" rows="4" cols="50" class="editContent">To develop a knowledge ecosystem with required infrastructure that can enable students and faculty to innovate and prototype their potential ideas with support from government, industry and reputed academic institutions around the world and help them to realize their potentials.</textarea>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Modal End-->
         </div>
         <div class="titleAndContent">
             <div class="titleAndEditIcon">
-                <h2 class="aboutTitle">About us</h2>
-                <button class="edit-icon" data-toggle="modal" data-target="#aboutUs"><img src="../static/icons/edit-icon-pen.svg" class="pen"></button>
+                <h2 class="aboutTitle">About us</h2>                
             </div>
             <p class="aboutContent">IEDC SCTCE is aimed at direct involvement of the student community in the creation of a sustainable entrepreneurial ecosystem in our college. IEDC SCTCE will be a hub of activities of entrepreneurship development activities in our college under the IEDC program of the Kerala Startup Mission. We focus the promotion of Innovation (Entrepreneurship through Innovation) and that should lead to a startup. Basically it create a product development ecosystem in our college.</p>
-            <!-- Modal -->
-            <div class="modal fade" id="aboutUs" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Edit</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <input type="text" class="editTitle" value="About us">
-                            <textarea name="w3review" rows="4" cols="50" class="editContent">IEDC SCTCE is aimed at direct involvement of the student community in the creation of a sustainable entrepreneurial ecosystem in our college. IEDC SCTCE will be a hub of activities of entrepreneurship development activities in our college under the IEDC program of the Kerala Startup Mission. We focus the promotion of Innovation (Entrepreneurship through Innovation) and that should lead to a startup. Basically it create a product development ecosystem in our college.</textarea>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Modal End-->
         </div>
         <div class="titleAndContent">
             <div class="titleAndEditIcon">
                 <h2 class="aboutTitle">Mission</h2>
-                <button class="edit-icon" data-toggle="modal" data-target="#mission">
-                    <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                </button>
             </div>
-            <p class="aboutContent">To promote innovation and entrepreneurial culture in educational institutions and to develop institutional mechanism to foster techno-entrepreneurship for generation of wealth and employment.</p>
-            <!-- Modal -->
-            <div class="modal fade" id="mission" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Edit</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <input type="text" class="editTitle" value="Mission">
-                            <textarea name="w3review" rows="4" cols="50" class="editContent">To promote innovation and entrepreneurial culture in educational institutions and to develop institutional mechanism to foster techno-entrepreneurship for generation of wealth and employment.</textarea>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Modal End-->
+            <p class="aboutContent">To promote innovation and entrepreneurial culture in educational institutions and to develop institutional mechanism to foster techno-entrepreneurship for generation of wealth and employment.</p>            
         </div>
     </div>
     <div class="galleryAndEvents">
         <div class="gallery">
             <div class="gallery-header">
                 <p class="gallerry headline">Gallery</p>
-                <button class="add-icon" type="button" data-toggle="modal" data-target="#addImg">
-                    <img src="../static/icons/add-icon-plus.svg" alt="" class="add-icon-plus">
-                </button>
-                <!-- Modal -->
-                <div class="modal fade" id="addImg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle" style="color:black">Add Gallery Image</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <!-- <input type="text" class="editTitle" value="Mission">
-                                <textarea name="w3review" rows="4" cols="50" class="editContent">To promote innovation and entrepreneurial culture in educational institutions and to develop institutional mechanism to foster techno-entrepreneurship for generation of wealth and employment.</textarea> -->
-                                <p class="headline1" style="color:black">Upload Image (Preffered Image Dimension 250 * 415 px, Preffered Image type JPG)</p>
-                                <form>
-                                    <div class="form-group">
-                                      <label for="exampleFormControlFile1">Example file input</label>
-                                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                    </div>
-                                </form>
-
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal End-->
                 <div class="controls">
                     <button class="left control">
                         <img src="../static/icons/arrow.svg" alt="">
@@ -265,33 +102,6 @@
                 {% for i in gimages %}
                 <div class="gallery-image">
                     <img src="../static/images/Gallery/{{i.name}}" alt="" class="carousel-img" loading="lazy">
-                    <button class="remove-icon" type="button" data-toggle="modal" data-target="#removeImg">
-                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                    </button>
-                    <!-- Modal -->
-                    <div class="modal fade" id="removeImg" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLongTitle" style="color:black">Remove Gallery Image</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <!-- <input type="text" class="editTitle" value="Mission">
-                                    <textarea name="w3review" rows="4" cols="50" class="editContent">To promote innovation and entrepreneurial culture in educational institutions and to develop institutional mechanism to foster techno-entrepreneurship for generation of wealth and employment.</textarea> -->
-                                    <p class="headline1" style="color:black">Are you sure you want to remove this image?</p>
-                                    
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-danger">Remove</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Modal End-->
                 </div>
                 {% endfor %}
                                 
@@ -300,75 +110,6 @@
         <div class="events">
             <div class="gallery-header">
                 <p class="gallerry headline">Events</p>
-                <button class="add-icon" type="button" data-toggle="modal" data-target="#addImg1">
-                    <img src="../static/icons/add-icon-plus.svg" alt="" class="add-icon-plus">
-                </button>
-                <!-- Modal -->
-                <div class="modal fade" id="addImg1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document" >
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLongTitle" style="color:black">Add Event</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                <p class="headline1" style="color:black">Upload Image (Preffered Image Dimension 250 * 415 px, Preffered Image type JPG)</p>
-                                <br>
-                                <form>
-                                    <div class="form-group">
-                                      <!-- <label for="exampleFormControlFile1">Example file input</label> -->
-                                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                                    </div>
-                                </form>
-                                <hr>
-                                <p class="headline1" style="color:black">Under which category should the event appear in the website?</p>
-                                <br>
-                                <div class="form-group optionSet1">
-                                    <div class="formOption">
-                                        <input type="radio" id="Live_Now">
-                                        <p class="headline1" style="color:black">Live Now</p>
-                                    </div>
-                                    <div class="formOption">
-                                        <input type="radio" id="Coming_Soon">
-                                        <p class="headline1" style="color:black">Coming Soon</p>
-                                    </div>
-                                    <div class="formOption">
-                                        <input type="radio" id="Past_Event">
-                                        <p class="headline1" style="color:black">Past Event</p>
-                                    </div>
-                                </div>
-                                <hr>
-                                <p class="headline1" style="color:black">What kind of event is this?</p>
-                                <br>
-                                <div class="form-group optionSet2">
-                                    <div class="formOption">
-                                        <input type="radio" id="Core_Events">
-                                        <p class="headline1" style="color:black">Core Events</p>
-                                    </div>
-                                    <div class="formOption">
-                                        <input type="radio" id="Workshops_Quizes">
-                                        <p class="headline1" style="color:black">Workshops & Quizes</p>
-                                    </div>
-                                    <div class="formOption">
-                                        <input type="radio" id="Non_Technical">
-                                        <p class="headline1" style="color:black">Non Technical</p>
-                                    </div>
-                                    <div class="formOption">
-                                        <input type="radio" id="Talks">
-                                        <p class="headline1" style="color:black">Talks</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Modal End-->
             </div>
             <div class="events-section">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -874,9 +615,6 @@ Anjana - 9567922338
                 <div class="teamsSlide1">
                     <div class="gallery-image eventCard teamGroupImgContainer">
                         <img src="../static/images/Gallery/11.jpg" alt="" class="carousel-img eventCardImg teamGroupImg">
-                        <button class="edit-icon insideEvent insideTeamSlide1" data-toggle="modal" data-target="#teamEdit">
-                            <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                        </button>
                     </div>
                     <div class="teamQuote">
                         <p class="quoteStatemenr">“Coming together is a beginning staying together is progress, working together is success”</p>
