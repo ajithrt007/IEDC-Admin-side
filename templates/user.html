@@ -64,36 +64,6 @@
             </div>
         </div>
     </div>
-    <div class="site_analytics">
-        <p class="anandhunte-kalaviruth">Welcome {{name}}</p>
-        {% if current_user.is_authenticated %}
-        <a href="{{url_for('logout')}}"> Logout </a>
-        {% endif %}
-        {% with messages = get_flashed_messages() %}
-            {% if messages %}
-            <div class="notification is-danger">
-                {{ messages[0] }}.
-            </div>
-            {% endif %}
-        {% endwith %}
-        <p class="site-analytics headline">Site Analytics</p>
-        <div class="site-numberdata">
-            <p class="number-numberdata" data-n="1043">{{visitor}}</p>
-            <p class="numberdetails">Site Visits</p>
-            <form name="frmsquare">
-                <select size=1 name="cbostate" class="dropdown">
-                    <option>Till Now</option>
-                    <option>Today</option>
-                    <option>Yesterday</option>
-                    <option>Last Week</option>
-                    <option>Current Month</option>
-                    <option>Today</option>
-                    <option>Last Month</option>
-                    <option>Last 6 Months</option>
-               </select>
-           </form>
-        </div>
-    </div>
     <div class="aboutIEDC">
         <div class="titleAndContent">
             <div class="titleAndEditIcon">
