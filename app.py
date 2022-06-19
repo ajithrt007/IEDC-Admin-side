@@ -125,7 +125,7 @@ def home():
     db.session.add(v)
     db.session.commit()
     g = Gallery.query.all()
-    return render_template("main.html", visitor = v.count, gimages = g)
+    return render_template("user.html", visitor = v.count, gimages = g)
 
 @app.route("/admin")
 @login_required
