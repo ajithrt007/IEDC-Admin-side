@@ -1,4 +1,3 @@
-from asyncio.windows_events import NULL
 from ipaddress import ip_address
 from itertools import count
 from operator import methodcaller
