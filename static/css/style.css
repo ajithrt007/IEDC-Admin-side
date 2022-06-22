@@ -492,7 +492,7 @@ button:focus {
     padding: 13px;
 }
 .info-icon{
-    right: 79px;
+    right: 7px;
     padding: 3px;
 }
 .info-i{
@@ -726,10 +726,14 @@ input:focus {
 }
 .subSection{
     display: flex;
-    gap:10vw;
+    gap:5vw;
 }
 .leftSection,.rightSection{
     padding-top: 5vh;
+}
+.leftSection{
+    height: 50vh;
+    width: 40vw;
 }
 .submitBtn{
     background: #00AB07;
@@ -792,8 +796,8 @@ input:focus {
 }
 .iframeContainer{
     overflow: hidden;
-    height: 65%;
-    width: 124%;
+    height: 100%;
+    width: 100%;
     position: relative;
 
 }

@@ -22,7 +22,7 @@
             <a href="#">Gallery</a>
             <a href="#">Events</a>
             <a href="#">Team</a>
-            <a href="#">
+            <a href="mailto:iedc.sct@gmail.com">
                 <div class="contact">
                     <p>Contact</p>
                 </div>
@@ -99,17 +99,47 @@
                 </div>
             </div>
             <div class="carousel">
-                {% for i in gimages %}
                 <div class="gallery-image">
-                    <img src="../static/images/Gallery/{{i.name}}" alt="" class="carousel-img" loading="lazy">
+                    <img src="../static/images/Gallery/1.jpg" alt="" class="carousel-img" loading="lazy">
                 </div>
-                {% endfor %}
-                                
+                <div class="gallery-image">
+                    <img src="../static/images/Gallery/2.jpg" alt="" class="carousel-img" loading="lazy">
+                </div>                                 
+                <div class="gallery-image">
+                    <img src="../static/images/Gallery/3.jpg" alt="" class="carousel-img" loading="lazy">
+                </div> 
+                <div class="gallery-image">
+                    <img src="../static/images/Gallery/4.jpg" alt="" class="carousel-img" loading="lazy">
+                </div> 
+                <div class="gallery-image">
+                    <img src="../static/images/Gallery/5.jpg" alt="" class="carousel-img" loading="lazy">
+                </div> 
+                <div class="gallery-image">
+                    <img src="../static/images/Gallery/6.jpg" alt="" class="carousel-img" loading="lazy">
+                </div> 
+                <div class="gallery-image">
+                    <img src="../static/images/Gallery/7.jpg" alt="" class="carousel-img" loading="lazy">
+                </div> 
+                <div class="gallery-image">
+                    <img src="../static/images/Gallery/8.jpg" alt="" class="carousel-img" loading="lazy">
+                </div> 
+                <div class="gallery-image">
+                    <img src="../static/images/Gallery/9.jpg" alt="" class="carousel-img" loading="lazy">
+                </div> 
+                <div class="gallery-image">
+                    <img src="../static/images/Gallery/10.jpg" alt="" class="carousel-img" loading="lazy">
+                </div> 
+                <div class="gallery-image">
+                    <img src="../static/images/Gallery/11.jpg" alt="" class="carousel-img" loading="lazy">
+                </div> 
+                <div class="gallery-image">
+                    <img src="../static/images/Gallery/12.jpg" alt="" class="carousel-img" loading="lazy">
+                </div>
             </div>
         </div>
         <div class="events">
             <div class="gallery-header">
-                <p class="gallerry headline">Events</p>
+                <p class="gallerry headline">Events</p>                
             </div>
             <div class="events-section">
                 <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -129,112 +159,14 @@
                             <div class="eventCarousel">
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/10.jpg" alt="" class="carousel-img eventCardImg">
-                                    <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#infoEvent">
+                                    <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <div class="modal fade customModal" id="infoEvent" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                        <div class="rightleft">
-                                            <div class="leftContents">
-                                                <img src="../static/images/Event Posters/9.jpg" alt="" class="eventPoster">
-                                            </div>
-                                            <div class="rightContents">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title infoViewTitle" id="exampleModalLongTitle" style="color:black">Thought Provoke Share</h5>
-                                                    <button type="button" class="close infoViewCloseBtn" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body infoViewRightBody">
-                                                    <p class="modalBodyContent">
-                                                        Are you ready to put your whos whens wheres hows and whats in place?
-                                                        ______________________________________
-GET THE REPORTER IN YOU READY, SAYS IEDC
-Thiruvananthapuram:Major news reporting event is set to be conducted in the city on Nov 1st 2020. All reporters in the city are looking forward to it keenly.
-The event is hosted by IEDC SCTCE. There will be two rounds. First round will be newspaper report writing and the second one will be news reading.
-"For all the journo-enthusiasts out there, this is going to be a one of a kind opportunity",said CEO.Don't miss it and grab your seat as soon as possible. There will be no language barrier and competition will be free of registration cost.
-______________________________________
-
-For more info, contact
-Anjana - 9567922338
-                                                    </p>
-                                                </div>
-                                                <div class="modal-footer eventInfoViewFooter">
-                                                    <p class="eventDeadline modalBodyContent">Register before : 20th June 2022</p>
-                                                    <button type="button" class="btn btn-primary">Register</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>            
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button" data-toggle="modal" data-target="#removePoster">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="removePoster" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="exampleModalLongTitle" style="color:black">Remove Event</h5>
-                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div class="modal-body">
-                                                    <!-- <input type="text" class="editTitle" value="Mission">
-                                                    <textarea name="w3review" rows="4" cols="50" class="editContent">To promote innovation and entrepreneurial culture in educational institutions and to develop institutional mechanism to foster techno-entrepreneurship for generation of wealth and employment.</textarea> -->
-                                                    <p class="headline1" style="color:black">Are you sure you want to remove this image?</p>
-                                                    
-                                                </div>
-                                                <div class="modal-footer">
-                                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                    <button type="button" class="btn btn-danger">Remove</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Modal End-->
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/12.jpg" alt="" class="carousel-img eventCardImg">
-                                    <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#eventInfo">
+                                    <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
-                                    </button>
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="eventInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                            <div class="modal-content modalRightLeft">
-                                                <div class="modalRightContent">
-                                                    <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLongTitle" style="color:black">Remove Event</h5>
-                                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div class="modal-body">
-                                                        <!-- <input type="text" class="editTitle" value="Mission">
-                                                        <textarea name="w3review" rows="4" cols="50" class="editContent">To promote innovation and entrepreneurial culture in educational institutions and to develop institutional mechanism to foster techno-entrepreneurship for generation of wealth and employment.</textarea> -->
-                                                        <p class="headline1" style="color:black">Are you sure you want to remove this image?</p>
-                                                        
-                                                    </div>
-                                                    <div class="modal-footer">
-                                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                                        <button type="button" class="btn btn-danger">Remove</button>
-                                                    </div>
-                                                </div>
-                                                <div class="modalLeftContent">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!-- Modal End-->
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
                                     </button>
                                 </div>
                                 <div class="gallery-image eventCard">
@@ -242,35 +174,17 @@ Anjana - 9567922338
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/12.jpg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/12.jpg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
-                                    </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
                                     </button>
                                 </div>
                             </div>
@@ -283,23 +197,11 @@ Anjana - 9567922338
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/17.jpeg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
-                                    </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
                                     </button>
                                 </div>
                                 <div class="gallery-image eventCard">
@@ -307,35 +209,17 @@ Anjana - 9567922338
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/17.jpeg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/19.jpeg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
-                                    </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
                                     </button>
                                 </div>
                             </div>
@@ -350,23 +234,11 @@ Anjana - 9567922338
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/4.jpg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
-                                    </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
                                     </button>
                                 </div>
                                 <div class="gallery-image eventCard">
@@ -374,35 +246,17 @@ Anjana - 9567922338
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/4.jpg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/2.png" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
-                                    </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
                                     </button>
                                 </div>
                             </div>
@@ -415,23 +269,11 @@ Anjana - 9567922338
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/5.jpg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
-                                    </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
                                     </button>
                                 </div>
                                 <div class="gallery-image eventCard">
@@ -439,35 +281,17 @@ Anjana - 9567922338
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/13.jpg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/5.jpg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
-                                    </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
                                     </button>
                                 </div>
                             </div>
@@ -480,23 +304,11 @@ Anjana - 9567922338
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/12.jpg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
-                                    </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
                                     </button>
                                 </div>
                                 <div class="gallery-image eventCard">
@@ -504,35 +316,17 @@ Anjana - 9567922338
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/16.jpg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/7.jpg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
-                                    </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
                                     </button>
                                 </div>
                             </div>
@@ -545,23 +339,11 @@ Anjana - 9567922338
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/17.jpeg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
-                                    </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
                                     </button>
                                 </div>
                                 <div class="gallery-image eventCard">
@@ -569,35 +351,17 @@ Anjana - 9567922338
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/17.jpeg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
                                     </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
-                                    </button>
                                 </div>
                                 <div class="gallery-image eventCard">
                                     <img src="../static/images/Event Posters/19.jpeg" alt="" class="carousel-img eventCardImg">
                                     <button class="info-icon edit-icon insideEvent" data-toggle="modal" data-target="#">
                                         <img src="../static/icons/info-icon.svg" class="info-i">
-                                    </button>
-                                    <button class="edit-icon insideEvent" data-toggle="modal" data-target="#">
-                                        <img src="../static/icons/edit-icon-pen.svg" class="pen">
-                                    </button>
-                                    <button class="remove-icon" type="button">
-                                        <img src="../static/icons/remove-icon-minus.svg" alt="" class="remove-icon-minus">
                                     </button>
                                 </div>
                             </div>
@@ -920,25 +684,11 @@ Anjana - 9567922338
         </div>
         <div class="subSection">
             <div class="leftSection">
-                <div class="textField">
-                    <p class="textFieldLabel">Your name</p>
-                    <input type="text" class="textBox">
+                <div class="iframeContainer">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31570.179162978788!2d76.97678504229738!3d8.472871564370864!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05baee56e6b99b%3A0x4ce024c88eb0ddcb!2sSree%20Chitra%20Thirunal%20College%20of%20Engineering%2C%20Thiruvananthapuram!5e0!3m2!1sen!2sin!4v1650136957942!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <div class="textField">
-                    <p class="textFieldLabel">Your email-id</p>
-                    <input type="text" class="textBox">
-                </div>
-                <div class="textField">
-                    <p class="textFieldLabel">Your message</p>
-                    <textarea id="w3review" name="w3review" rows="4" cols="45" class="textArea"></textarea>
-                    <!-- <input type="text" class="textBox"> -->
-                </div>
-                <button type="button" class="submitBtn">Get all responses</button>
             </div>
             <div class="rightSection">
-                <div class="iframeContainer">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d31570.179162978788!2d76.97678504229738!3d8.472871564370864!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05baee56e6b99b%3A0x4ce024c88eb0ddcb!2sSree%20Chitra%20Thirunal%20College%20of%20Engineering%2C%20Thiruvananthapuram!5e0!3m2!1sen!2sin!4v1650136957942!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="eager" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
                 <div class="contactDetails">
                     <img src="../static/icons/Location-icon.svg" alt="" class="contactIcon">
                     <p class="contactText">NH 66, CTO Colony, Pappanamcode, Thiruvananthapuram, Kerala, 695018.</p>
@@ -960,12 +710,11 @@ Anjana - 9567922338
         </div>
         <p class="footerText">© Copyright IEDC SCTCE. All Rights Reserved</p>
     </div>
-    
-    <!-- <script src="../static/js/scrollTop.js"></script>   -->
-
+    <script src="../static/js/scrollTop.js"></script>
     <script src="../static/js/waypointsMin.js"></script>
     <script src="../static/js/counterUpMin.js"></script>
     <script src="../static/js/gallerySlider.js"></script>
+    <script src="../static/js/gallery.js"></script>
     <script src="../static/js/siteAnalyticsNumber.js" language="JavaScript"></script>
     <script src="../static/js/numberAnimation.js" language="JavaScript"></script>
     <script src="../static/bootstrap-4.0.0/slim.min.js"></script>
