@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../static/bootstrap-4.0.0/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
-<body>  
+<body id="theBody">  
     <div class="landing_page">
         <img src="../static/images/landing-image.svg" alt="" class="landing-image">
         <div class="iconset">
@@ -27,6 +27,24 @@
                     <p>Contact</p>
                 </div>
             </a>
+            <button class="hamburger-icon" onclick="openMenu()">
+                <img src="../static/icons/hamburger-icon.svg" alt="">
+            </button>
+        </div>
+        <div class="responsive-navbar" id="menu">
+            <div class="responsive">
+                <button class="close-button" id="close-btn" onclick="closeMenu()"><img src="../static/icons/close-icon.svg" alt="x" class="close-icon"></button>
+                <a href="#" class="responsive-ptag" onclick="closeMenu()">Home</a>
+                <a href="#" class="responsive-ptag" onclick="closeMenu()">About</a>
+                <a href="#" class="responsive-ptag" onclick="closeMenu()">Gallery</a>
+                <a href="#" class="responsive-ptag" onclick="closeMenu()">Events</a>
+                <a href="#" class="responsive-ptag" onclick="closeMenu()">Team</a>
+                <a href="mailto:iedc.sct@gmail.com" class="contact-button">
+                    <div class="contact responsiveContact">
+                        <p>Contact</p>
+                    </div>
+                </a>
+            </div>
         </div>
         <div class="quote">
             <p>“Innovation distinguishes between a leader and a follower”<br>-Steve Jobs</p>
@@ -707,6 +725,7 @@
         </div>
         <p class="footerText">© Copyright IEDC SCTCE. All Rights Reserved</p>
     </div>
+    <script src="../static/js/navBar.js"></script>
     <script src="../static/js/scrollTop.js"></script>
     <script src="../static/js/waypointsMin.js"></script>
     <script src="../static/js/counterUpMin.js"></script>

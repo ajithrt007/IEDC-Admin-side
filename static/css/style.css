@@ -841,3 +841,71 @@ input:focus {
     font-size: 25px;
     color: green;
 }
+.hamburger-icon{
+    /* display: none; */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+.responsive-navbar{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: whitesmoke;
+    z-index: 100;
+    padding: 5vh 0;
+}
+.responsive-navbar a{
+    text-decoration: none;
+    color: black;
+
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 49px;
+    letter-spacing: 0.01em;
+    color: #212121;
+    cursor: pointer;
+}
+.close-icon{
+    height: 6vh;
+    padding-right: 5vw;
+}
+.close-button{
+    background: transparent;
+    outline: none;
+    border: none;
+    display: flex;
+    justify-content: end;
+    cursor: pointer;
+}
+.responsiveContact{
+    padding: 20px 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2vw;
+    line-height: 17px;
+    letter-spacing: 0.01em;
+}
+.responsiveContact p{
+    text-align: center;
+}
+.contact-button{
+    padding: 0 40vw;
+}
+.responsive-ptag{
+    text-align: end;
+    padding-right: 5vw;
+}
+.responsive-navbar{
+    display: none;
+}
+.responsive{
+    display: flex;
+    flex-direction: column;
+    gap: 7vh;
+}
