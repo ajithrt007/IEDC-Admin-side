@@ -87,6 +87,7 @@ img{
     letter-spacing: 0.05em;
     color: #EBEBEB;
     text-align: center;
+    padding: 0 6vw;
 }
 .quote{
     position: absolute;
@@ -155,7 +156,7 @@ img{
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 4vw;
     line-height: 67px;
     text-align: center;
     letter-spacing: 0.04em;
@@ -842,7 +843,7 @@ input:focus {
     color: green;
 }
 .hamburger-icon{
-    /* display: none; */
+    display: none;
     background: transparent;
     border: none;
     cursor: pointer;
@@ -908,4 +909,97 @@ input:focus {
     display: flex;
     flex-direction: column;
     gap: 7vh;
+}
+.arrow-mob-view{
+    display: none;
+}
+.white-space{
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    body{
+        overflow-x: hidden;
+    }
+    .arrow-mob-view{
+        display: block;
+    }
+    .white-space{
+        display: block;
+        width: 30vw;
+    }
+    .iedc-logo {
+        height: 16vw;
+    }
+    .sct-logo {
+        height: 18vw;
+    }
+    .aboutIEDC {
+        margin-top: 35%;
+        margin-left: 5vw;
+    }
+    .numerical_data {
+        position: absolute;
+        display: flex;
+        top: 95vh;
+        right: 0;
+        left: 30vw;
+        box-shadow: 4px 4px 15px 3px rgba(0, 0, 0, 0.25);
+        background: transparent;
+    }
+    .square {
+        width: 28vw;
+        background: #FFFFFF;
+        height: 28vw;
+    }
+    .number {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 7vw;
+        line-height: 67px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: #212121;
+        padding: 4vh 0;
+    }
+    .field_name {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 0.9rem;
+        line-height: 24px;
+        text-align: center;
+        letter-spacing: 0.04em;
+        color: black;
+        background: transparent;
+    }
+    .title {
+        position: absolute;
+        top: 69.5vh;
+        margin-left: 5vw;
+    }
+    .title p {
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 5rem;
+        line-height: 16vh;
+        letter-spacing: 0.04em;
+        color: #212121;
+        margin-top: -5vh;
+    }
+}
+@media screen and (max-width: 1130px) {
+    .l-shape{
+        display: none;
+    }
+}
+@media screen and (max-width: 1300px) {
+    .hamburger-icon{
+        display: block;
+        margin-top: 2vh;
+    }
+    .nav-components{
+        display: none;
+    }
 }
