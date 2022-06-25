@@ -943,12 +943,12 @@ input:focus {
         top: 95vh;
         right: 0;
         left: 30vw;
-        box-shadow: 4px 4px 15px 3px rgba(0, 0, 0, 0.25);
+        /* box-shadow: 4px 4px 15px 3px rgba(0, 0, 0, 0.25); */
         background: transparent;
     }
     .square {
         width: 28vw;
-        background: #FFFFFF;
+        /* background: #FFFFFF; */
         height: 28vw;
     }
     .number {
@@ -988,6 +988,42 @@ input:focus {
         color: #212121;
         margin-top: -5vh;
     }
+    .aboutTitle {
+        font-size: 5vw;
+    }
+    .titleAndContent p {
+        margin-right: 5vw;
+        font-weight: normal;
+        font-size: 3.95vw;
+        letter-spacing: 0.5px;
+    }
+    .quote p {
+        font-family: Allura;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 8.5vw;
+        line-height: 62px;
+        letter-spacing: 1px;
+        color: #EBEBEB;
+        text-align: center;
+        padding: 0 6vw;
+    }
+    .headline {
+        font-size: 6vw;
+    }
+    .galleryAndEvents {
+        margin-top: 10.5%;
+    }
+    .controls {
+        gap: 25px;
+    }
+    .control img {
+        height: 26px;
+    }
+    .carousel-img {
+        height: 230px;
+        width: 325px;
+    }
 }
 @media screen and (max-width: 1130px) {
     .l-shape{
@@ -1001,5 +1037,8 @@ input:focus {
     }
     .nav-components{
         display: none;
+    }
+    .navbar{
+        padding: 14px 21px;
     }
 }
