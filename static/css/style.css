@@ -958,14 +958,27 @@ input:focus {
         margin-left: 5vw;
     }
     .numerical_data {
-        position: absolute;
+        position: relative;
         display: flex;
         top: 95vh;
         right: 0;
-        left: 30vw;
         box-shadow: none;
         background: transparent;
+        margin-top: -751px;
+        padding-left: 30vw;
+        width: 100vw;
+        overflow-x: scroll;
     }
+     /* Hide scrollbar for Chrome, Safari and Opera */
+    .numerical_data::-webkit-scrollbar {
+        display: none;
+    }
+  
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .numerical_data {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    } 
     .square {
         width: 28vw;
         height: 28vw;
@@ -975,11 +988,11 @@ input:focus {
         font-style: normal;
         font-weight: 600;
         font-size: 7vw;
-        line-height: 67px;
+        line-height: 2vw;
         text-align: center;
         letter-spacing: 0.04em;
         color: #212121;
-        padding: 4vh 0;
+        padding: 13vw 0;
     }
     .field_name {
         font-family: Montserrat;
@@ -988,7 +1001,7 @@ input:focus {
         font-size: 3vw;
         line-height: 24px;
         text-align: center;
-        letter-spacing: 0.04em;
+        letter-spacing: 0;
         color: black;
         background: transparent;
     }
