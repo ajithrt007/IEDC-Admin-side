@@ -559,7 +559,7 @@ button:focus {
 /* Cutom modal css end */
 .slides{    
     width:100vw;
-    height:100vh;
+    /* height:100vh; */
     background: #EBEBEB;
 }
 .teamsSlide1{
@@ -615,6 +615,11 @@ button:focus {
 }
 .membersContainer{
     padding: 6% 0;
+    display: flex;
+    row-gap: 5vw;
+    flex-wrap: wrap;
+    column-gap: 8vw;
+    justify-content: center;
 }
 .photoName{
     position: relative;
@@ -965,7 +970,7 @@ input:focus {
         box-shadow: none;
         background: transparent;
         margin-top: -82vh;
-        padding-left: 30vw;
+        padding-left: 25vw;
         width: 100vw;
         overflow-x: scroll;
     }
@@ -1103,5 +1108,8 @@ input:focus {
     }
     .quoteAuthor{
         padding-right: 4vw;
+    }
+    .teamGroupImg{
+        width: 366px;
     }
 }
