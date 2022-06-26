@@ -450,21 +450,22 @@ button:focus {
 .event{
     display: flex;
     align-items: center;
-    gap:15px;    
+    gap: 15px;
     margin-top: 3%;
+    width: 90vw;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 .eventCarousel{
     display: flex;
     align-items: center;
     gap:15px;
-    overflow-x: scroll;
-    overflow-y: hidden;
 }
-.eventCarousel::-webkit-scrollbar {
+.event::-webkit-scrollbar {
     display: none;
 }
 /* Hide scrollbar for IE, Edge and Firefox */
-.eventCarousel {
+.event {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
