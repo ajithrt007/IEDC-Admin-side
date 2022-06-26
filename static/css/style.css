@@ -1117,4 +1117,36 @@ input:focus {
         display: flex;
         justify-content: center;
     }
+    .typeofEVent {
+        font-size: 25px;
+        min-width: 192px;
+    }
+    .eventCarousel {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        overflow-x: unset;
+        overflow-y: unset;
+    }
+    .event {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-top: 3%;
+        width: calc(100vw - 15px - 5vw);
+        overflow-x: scroll;
+    }
+     /* Hide scrollbar for Chrome, Safari and Opera */
+     .event::-webkit-scrollbar {
+        display: none;
+    }  
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .event {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+    } 
+    .carousel-img {
+        height: 230px;
+        width: unset;
+    }
 }
