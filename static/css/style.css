@@ -916,6 +916,26 @@ input:focus {
 .white-space{
     display: none;
 }
+@media screen and (max-width: 1300px) {
+    body{
+        overflow-x: hidden;
+    }
+    .hamburger-icon{
+        display: block;
+        margin-top: 2vh;
+    }
+    .nav-components{
+        display: none;
+    }
+    .navbar{
+        padding: 14px 21px;
+    }
+}
+@media screen and (max-width: 1130px) {
+    .l-shape{
+        display: none;
+    }
+}
 @media screen and (max-width: 600px) {
     body{
         overflow-x: hidden;
@@ -943,7 +963,7 @@ input:focus {
         top: 95vh;
         right: 0;
         left: 30vw;
-        /* box-shadow: 4px 4px 15px 3px rgba(0, 0, 0, 0.25); */
+        box-shadow: none;
         background: transparent;
     }
     .square {
@@ -982,7 +1002,7 @@ input:focus {
         font-family: Montserrat;
         font-style: normal;
         font-weight: bold;
-        font-size: 5rem;
+        font-size: 4rem;
         line-height: 16vh;
         letter-spacing: 0.04em;
         color: #212121;
@@ -1024,21 +1044,13 @@ input:focus {
         height: 230px;
         width: 325px;
     }
-}
-@media screen and (max-width: 1130px) {
-    .l-shape{
-        display: none;
+    .iedc p{
+        color: whitesmoke;
     }
-}
-@media screen and (max-width: 1300px) {
+    .hamburger-icon img{
+        height: 5vw;
+    }
     .hamburger-icon{
-        display: block;
-        margin-top: 2vh;
-    }
-    .nav-components{
-        display: none;
-    }
-    .navbar{
-        padding: 14px 21px;
+        margin-top: 1vh;
     }
 }
