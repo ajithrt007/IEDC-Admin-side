@@ -968,7 +968,6 @@ input:focus {
     }
     .square {
         width: 28vw;
-        /* background: #FFFFFF; */
         height: 28vw;
     }
     .number {
@@ -986,7 +985,7 @@ input:focus {
         font-family: Montserrat;
         font-style: normal;
         font-weight: 500;
-        font-size: 0.9rem;
+        font-size: 3vw;
         line-height: 24px;
         text-align: center;
         letter-spacing: 0.04em;
@@ -1052,5 +1051,19 @@ input:focus {
     }
     .hamburger-icon{
         margin-top: 1vh;
+    }
+    .subSection {
+        flex-direction: column;
+        gap: 0;
+    }
+    .leftSection {
+        width: 100%;
+    }
+    .socialIconSet {
+        gap: 8vw;
+        justify-content: center;
+    }
+    .contactHeader {
+        align-items: center;
     }
 }
