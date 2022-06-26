@@ -1112,4 +1112,9 @@ input:focus {
     .teamGroupImg{
         width: 366px;
     }
+    .teamGroupImgContainer{
+        height: unset;
+        display: flex;
+        justify-content: center;
+    }
 }
