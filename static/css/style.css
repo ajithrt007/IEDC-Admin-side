@@ -871,7 +871,7 @@ input:focus {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 900;
-    font-size: 40px;
+    font-size: 37px;
     line-height: 49px;
     letter-spacing: 0.01em;
     color: #212121;
@@ -933,8 +933,15 @@ input:focus {
     .nav-components{
         display: none;
     }
+    .numerical_data {
+        box-shadow: none;
+        background: transparent;
+    }
     .navbar{
         padding: 14px 21px;
+    }
+    .field_name{
+        font-size: 1.4vw;
     }
 }
 @media screen and (max-width: 1130px) {
@@ -968,8 +975,8 @@ input:focus {
         display: flex;
         top: 95vh;
         right: 0;
-        box-shadow: none;
-        background: transparent;
+        /* box-shadow: none;
+        background: transparent; */
         margin-top: -82vh;
         padding-left: 25vw;
         width: 100vw;
