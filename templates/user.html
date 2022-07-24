@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="../static/bootstrap-4.0.0/dist/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
-<body id="theBody">  
+<body id="theBody">
     <div class="landing_page" id="home">
         <img src="../static/images/landing-image.svg" alt="" class="landing-image">
         <div class="iconset">
@@ -20,7 +20,8 @@
             <a href="#home" class="nav-components">Home</a>
             <a href="#about" class="nav-components">About</a>
             <a href="#gallery" class="nav-components">Gallery</a>
-            <a href="#events" class="nav-components">Events</a>
+            <!-- <a href="#events" class="nav-components">Events</a> -->
+            <a href="../templates/event-details.html" class="nav-components">Events</a>
             <a href="#team" class="nav-components">Team</a>
             <a href="mailto:iedc.sct@gmail.com" class="nav-components">
                 <div class="contact">
@@ -107,47 +108,49 @@
             <div class="gallery-header">
                 <p class="gallerry headline">Gallery</p>
                 <div class="controls">
-                    <button class="left control">
+                    <button class="left control" onClick = "scrollLeft()">
                         <img src="../static/icons/arrow.svg" alt="">
                     </button>
-                    <button class="right control">
+                    <button class="right control" onClick = "scrollRight()">
                         <img src="../static/icons/arrow.svg" alt="">
                     </button>
                 </div>
             </div>
-            <div class="carousel">
-                <div class="gallery-image">
-                    <img src="../static/images/Gallery/1-min.jpg" alt="" class="carousel-img" loading="lazy">
-                </div>
-                <div class="gallery-image">
-                    <img src="../static/images/Gallery/2-min.jpg" alt="" class="carousel-img" loading="lazy">
-                </div>                                 
-                <div class="gallery-image">
-                    <img src="../static/images/Gallery/3-min.jpg" alt="" class="carousel-img" loading="lazy">
-                </div> 
-                <div class="gallery-image">
-                    <img src="../static/images/Gallery/4-min.jpg" alt="" class="carousel-img" loading="lazy">
-                </div> 
-                <div class="gallery-image">
-                    <img src="../static/images/Gallery/5-min.jpg" alt="" class="carousel-img" loading="lazy">
-                </div> 
-                <div class="gallery-image">
-                    <img src="../static/images/Gallery/6-min.jpg" alt="" class="carousel-img" loading="lazy">
-                </div> 
-                <div class="gallery-image">
-                    <img src="../static/images/Gallery/7-min.jpg" alt="" class="carousel-img" loading="lazy">
-                </div> 
-                <div class="gallery-image">
-                    <img src="../static/images/Gallery/8-min.jpg" alt="" class="carousel-img" loading="lazy">
-                </div> 
-                <div class="gallery-image">
-                    <img src="../static/images/Gallery/9-min.jpg" alt="" class="carousel-img" loading="lazy">
-                </div> 
-                <div class="gallery-image">
-                    <img src="../static/images/Gallery/10-min.jpg" alt="" class="carousel-img" loading="lazy">
-                </div> 
-                <div class="gallery-image">
-                    <img src="../static/images/Gallery/11-min.jpg" alt="" class="carousel-img" loading="lazy">
+            <div class="carouselContaier">
+                <div class="carousel1">
+                    <div class="gallery-image">
+                        <img src="../static/images/Gallery/1-min.jpg" alt="" class="carousel-img" loading="lazy">
+                    </div>
+                    <div class="gallery-image">
+                        <img src="../static/images/Gallery/2-min.jpg" alt="" class="carousel-img" loading="lazy">
+                    </div>                                 
+                    <div class="gallery-image">
+                        <img src="../static/images/Gallery/3-min.jpg" alt="" class="carousel-img" loading="lazy">
+                    </div> 
+                    <div class="gallery-image">
+                        <img src="../static/images/Gallery/4-min.jpg" alt="" class="carousel-img" loading="lazy">
+                    </div> 
+                    <div class="gallery-image">
+                        <img src="../static/images/Gallery/5-min.jpg" alt="" class="carousel-img" loading="lazy">
+                    </div> 
+                    <div class="gallery-image">
+                        <img src="../static/images/Gallery/6-min.jpg" alt="" class="carousel-img" loading="lazy">
+                    </div> 
+                    <div class="gallery-image">
+                        <img src="../static/images/Gallery/7-min.jpg" alt="" class="carousel-img" loading="lazy">
+                    </div> 
+                    <div class="gallery-image">
+                        <img src="../static/images/Gallery/8-min.jpg" alt="" class="carousel-img" loading="lazy">
+                    </div> 
+                    <div class="gallery-image">
+                        <img src="../static/images/Gallery/9-min.jpg" alt="" class="carousel-img" loading="lazy">
+                    </div> 
+                    <div class="gallery-image">
+                        <img src="../static/images/Gallery/10-min.jpg" alt="" class="carousel-img" loading="lazy">
+                    </div> 
+                    <div class="gallery-image">
+                        <img src="../static/images/Gallery/11-min.jpg" alt="" class="carousel-img" loading="lazy">
+                    </div>
                 </div>
             </div>
         </div>
@@ -689,7 +692,6 @@
     <script src="../static/js/waypointsMin.js"></script>
     <script src="../static/js/counterUpMin.js"></script>
     <script src="../static/js/gallerySlider.js"></script>
-    <script src="../static/js/gallery.js"></script>
     <script src="../static/js/siteAnalyticsNumber.js" language="JavaScript"></script>
     <script src="../static/js/numberAnimation.js" language="JavaScript"></script>
     <script src="../static/bootstrap-4.0.0/slim.min.js"></script>

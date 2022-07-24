@@ -1,21 +1,15 @@
-// const carousel = document.querySelector('.carousel');
-// let initialPos = null;
-// let moving = false;
-// window.addEventListener('mousedown',(e)=>{
-//     initialPos = e.pageX;
-//     moving = true;
-//     const transformMatrix = window.getComputedStyle(carousel).getPropertyValue('transform');
-//     if(transformMatrix !== 'none'){
-//         transform = parseInt(transformMatrix.split(',')[4].trim());
-//     }
+const carousel = document.querySelector('.carousel1');
+const rightArrow = document.querySelector('.right');
+const leftArrow = document.querySelector('.left');
+// rightArrow.addEventListener("click",(e)=>{
+//     carousel.scrollLeft = 425;
 // });
-// window.addEventListener('mousemove',(e)=>{
-//     if(moving){
-//         const currentPos = e.pageX;
-//         const diff = currentPos - initialPos;       
-//         carousel.style.transform = "translateX(" + diff + "px)";
-//     }
+// leftArrow.addEventListener("click",(e)=>{
+//     carousel.scrollLeft = -425;
 // });
-// window.addEventListener('mouseup',(e)=>{
-//     moving = false;
-// });
+function scrollLeft(){
+    carousel.scrollLeft = -425;
+}
+function scrollRight(){
+    carousel.scrollLeft = 425;
+}

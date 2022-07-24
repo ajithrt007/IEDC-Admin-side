@@ -368,7 +368,7 @@ button:focus {
 .remove-icon-minus{
     margin-bottom: 6px;
 }
-.carousel{
+.carousel1{
     display: flex;
     gap:15px;
     overflow-x: scroll;
@@ -377,11 +377,11 @@ button:focus {
     margin-bottom: 3%;
     cursor: grab;
 }
-.carousel::-webkit-scrollbar {
+.carousel1::-webkit-scrollbar {
     display: none;
 }
 /* Hide scrollbar for IE, Edge and Firefox */
-.carousel {
+.carousel1 {
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
@@ -1158,3 +1158,8 @@ input:focus {
         width: unset;
     }
 }
+/* gallery slider start */
+.carouselContaier{
+    width: 100vw;
+}
+/* Gallery slider end */

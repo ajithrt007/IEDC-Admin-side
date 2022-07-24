@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+:root{
+  --horizontal-margin: 5vw;
+  --vertical-margin: 5vh;
+}
+body{
+  margin: 0;
+  overflow: hidden;
+}
+p{
+  margin: 0;
+}
+h1{
+  margin: 0;
+}
+/* Stage 1 : CSS of header big screen view start*/
+.bg img{
+  position: absolute;
+  z-index: -30;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+}
+.dark-layer{
+  position: absolute;
+  z-index: -20;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  opacity: 0.8;
+}
+.main-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.4);
+  padding: var(--vertical-margin) var(--horizontal-margin);  
+}
+.title-and-arrow{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.title{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: normal;
+  letter-spacing: 0.02em;
+  color: #FFFFFF;
+}
+.search-bar{
+  position: relative;
+}
+.search-box{
+  width: 333px;
+  height: 41px;
+  background: transparent;
+  border: 2px solid white;
+  border-radius: 6px;
+  opacity: 0.8;
+  color: white;
+  padding : 0 10px 0 40px;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+}
+.search-icon{
+  position: absolute;
+  left: 9px;
+  top: 11px;
+}
+.search-bar button{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+.tags-header{
+  margin: 3vh var(--horizontal-margin);
+  display: flex;
+  gap: 1vw;
+  opacity: 0.85;
+}
+.tag{
+  background: transparent;
+  color: white;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 10px 20px;
+  border-radius: 20px;  
+  border: 2px solid white;
+  white-space: nowrap;
+}
+.active-tag{
+  background: white;
+  color: black;
+}
+/* Stage 1 : CSS of header big screen view end*/
+/*--------------------------------------------*/
+/* Stage 2 : CSS of header mob screen view start*/
+@media screen and (max-width: 600px) {
+  .title{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 35px;
+  }
+  .search-box{
+    display: none;
+  }
+  .search-icon{
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+  .main-header{
+    padding: 3vh var(--horizontal-margin);
+  }
+  body{
+    overflow: hidden;
+  }
+  .tags-header{
+    overflow-x: scroll;
+    margin: 2vh 0 2vh var(--horizontal-margin);
+    /*code for hiding scrollbar*/
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  /*code for hiding scrollbar*/
+  .tags-header::-webkit-scrollbar {
+    display: none; /*Chrome*/
+  }
+}
+/* Stage 2 : CSS of header mob screen view end*/
+/*--------------------------------------------*/
+/* Stage 3 : CSS of Event card starting*/
+.event-details{
+  padding: 1vh var(--horizontal-margin);
+  font-family: 'Montserrat';
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  height: calc(100vh - (16vh + 36px + 44.2px));
+  overflow-y: scroll;
+  padding-bottom: 11vh;
+}
+.event{
+  display: flex;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border-radius: 11px;
+  width: calc(100vw - var(--horizontal-margin)*2);
+  max-height: 63vh;
+}
+.poster{
+  height: 63vh;
+  width: 35%;
+  min-width: 35%;
+}
+.event-poster{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 11px 0 0 11px;
+}
+.content-part{
+  padding: 5vh 3vw;
+}
+.content-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.event-name{
+  font-style: normal;
+  font-weight: 600;
+  font-size: 30.4494px;
+  line-height: 37px;
+  letter-spacing: 0.01em;
+  opacity: 0.8;
+}
+.register{
+  opacity: 0.95;
+  transition: width 3s;
+}
+.register:hover{
+  width: 150px;
+}
+.content{
+  margin-top: 3vh;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;  
+  letter-spacing: 0.02em;
+  opacity: 0.7;
+  height: calc(100% - 3vh - 5vh);
+  overflow-y: scroll;
+  max-height: calc(100% - 3vh - 5vh);
+}
+.last-event{
+  margin-bottom: 11vh;
+}
+.copy-to-clipboard-registerBtn{
+  display: flex;
+  gap: 1vw;
+}
+.copy-clipboard{
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid white;
+  height: 36px;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.copy-clipboard:hover{
+  border: none;
+  transform: scale(1.5);
+}
+/* Stage 3 : CSS of Event card ending*/
+/*-----------------------------------*/
+/*Stage 4: CSS of Event card mob view starting*/
+@media screen and (max-width: 600px) {
+  .event{
+    display: unset;
+    max-height: 75vh;
+    height: 75vh;
+  }
+  .poster{
+    width: 100%;
+    height: 38vh;
+  }
+  .event-poster{
+    border-radius: 11px 11px 0 0;
+  }
+  .content-part{
+    padding: 2vh 6vw;
+    position: relative;
+    height: calc(75vh - 38vh - 36px);
+  }
+  .event-name{
+    font-size: 25px;
+    line-height: 24px;
+  }
+  .copy-to-clipboard-registerBtn{
+    position: absolute;
+    bottom: 2vh;
+    gap: 5vw;
+  }
+  .content{    
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 1vh;
+    height: calc(75vh - 38vh -2vh - 24px - 1vh);
+    overflow-y: scroll;
+  }
+  .register{
+    position: absolute;
+    left: calc((100vw - 10vw - 12vw - 100px)/2);
+    width: 100px;
+  }
+  .copy-clipboard{
+    margin-left: calc(((100vw - 10vw - 12vw - 100px)/2) - 70px);
+  }
+/*Stage 4: CSS of Event card mob view ending*/
