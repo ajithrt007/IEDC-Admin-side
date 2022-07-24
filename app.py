@@ -55,7 +55,7 @@ def load_user(user_id):
     # since the user_id is just the primary key of our user table, use it in the query for the user
     return User.query.get(int(user_id))
 
-
+"""
 @app.route("/login")
 def login():
     try:
@@ -116,7 +116,7 @@ def createadmin():
 def logout():
     logout_user()
     return redirect(url_for('login'))
-
+"""
 @app.route("/")
 def home():
     v = Visitors.query.first()
@@ -125,7 +125,10 @@ def home():
     db.session.commit()
     g = Gallery.query.all()
     return render_template("user.html", visitor = v.count, gimages = g)
-
+@app.route("/events")
+def events():
+    return render_template("event-details.html")
+"""
 @app.route("/admin")
 @login_required
 def admin():
@@ -136,7 +139,7 @@ def admin():
 @login_required
 def deletefilegallery():
     pass
-
+"""
 """@app.route("/uploadfilegallery", methods=['POST'])
 @login_required
 def uploadfilegallery():
