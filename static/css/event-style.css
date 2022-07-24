@@ -119,14 +119,14 @@ h1{
     top: 0;
   }
   .main-header{
-    padding: 3vh var(--horizontal-margin);
+    padding: 2vh var(--horizontal-margin);
   }
   body{
     overflow: hidden;
   }
   .tags-header{
     overflow-x: scroll;
-    margin: 2vh 0 2vh var(--horizontal-margin);
+    margin: 1vh 0 1vh var(--horizontal-margin);
     /*code for hiding scrollbar*/
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
