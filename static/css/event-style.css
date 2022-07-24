@@ -161,11 +161,15 @@ h1{
   height: 63vh;
   width: 35%;
   min-width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
 }
 .event-poster{
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 11px 0 0 11px;
 }
 .content-part{
