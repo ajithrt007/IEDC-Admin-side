@@ -252,10 +252,10 @@ h1{
   }
   .event-name{
     font-size: 25px;
-    line-height: 24px;
+    line-height: normal;
   }
   .copy-to-clipboard-registerBtn{
-    position: absolute;
+    /*! position: absolute; */
     bottom: 2vh;
     gap: 5vw;
   }
@@ -267,11 +267,15 @@ h1{
     overflow-y: scroll;
   }
   .register{
-    position: absolute;
+    /*! position: absolute; */
     left: calc((100vw - 10vw - 12vw - 100px)/2);
     width: 100px;
   }
   .copy-clipboard{
-    margin-left: calc(((100vw - 10vw - 12vw - 100px)/2) - 70px);
+    /*! margin-left: calc(((100vw - 10vw - 12vw - 100px)/2) - 70px); */
+  }
+  .content-header{
+    flex-direction: column;
+    justify-content: flex-start;
   }
 /*Stage 4: CSS of Event card mob view ending*/
