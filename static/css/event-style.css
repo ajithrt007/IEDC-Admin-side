@@ -235,8 +235,8 @@ h1{
 @media screen and (max-width: 600px) {
   .event{
     display: unset;
-    max-height: 75vh;
-    height: 75vh;
+    max-height: 70vh;
+    height: 70vh;
   }
   .poster{
     width: 100%;
@@ -248,7 +248,8 @@ h1{
   .content-part{
     padding: 2vh 6vw;
     position: relative;
-    height: calc(75vh - 38vh - 36px);
+    height: calc(70vh - 38vh - 36px);
+    /*! max-height: calc(75vh - 38vh - 36px); */
   }
   .event-name{
     font-size: 25px;
@@ -263,7 +264,7 @@ h1{
     font-size: 14px;
     line-height: 22px;
     margin-top: 1vh;
-    height: calc(75vh - 38vh -2vh - 24px - 1vh);
+    max-height: ;
     overflow-y: scroll;
   }
   .register{
@@ -276,6 +277,7 @@ h1{
   }
   .content-header{
     flex-direction: column;
-    justify-content: flex-start;
+    align-items: unset;
+    gap: 1vh;
   }
 /*Stage 4: CSS of Event card mob view ending*/
