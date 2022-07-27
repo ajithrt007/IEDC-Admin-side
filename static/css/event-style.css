@@ -174,6 +174,8 @@ h1{
 }
 .content-part{
   padding: 5vh 3vw;
+  max-width: calc((100vw - var(--horizontal-margin)*2) - 35%);
+  width: calc((100vw - var(--horizontal-margin)*2) - 35%);
 }
 .content-header{
   display: flex;
@@ -229,6 +231,9 @@ h1{
   border: none;
   transform: scale(1.5);
 }
+.extend-btn{
+  display: none;
+}
 /* Stage 3 : CSS of Event card ending*/
 /*-----------------------------------*/
 /*Stage 4: CSS of Event card mob view starting*/
@@ -237,6 +242,7 @@ h1{
     display: unset;
     max-height: 70vh;
     height: 70vh;
+    overflow-y: ;
   }
   .poster{
     width: 100%;
@@ -247,12 +253,15 @@ h1{
   }
   .content-part{
     padding: 2vh 6vw;
-    position: relative;
+    /*! position: relative; */
     height: calc(70vh - 38vh - 36px);
-    /*! max-height: calc(75vh - 38vh - 36px); */
+    max-height: calc(70vh - 38vh - 36px);
+    width: unset;
+    max-width: unset;
+    overflow-y: hidden;
   }
   .event-name{
-    font-size: 25px;
+    font-size: 22px;
     line-height: normal;
   }
   .copy-to-clipboard-registerBtn{
@@ -265,7 +274,9 @@ h1{
     line-height: 22px;
     margin-top: 1vh;
     max-height: ;
-    overflow-y: scroll;
+    overflow-y: unset;
+    height: unset;
+    max-height: unset;
   }
   .register{
     /*! position: absolute; */
@@ -279,5 +290,23 @@ h1{
     flex-direction: column;
     align-items: unset;
     gap: 1vh;
+  }
+  .extend-btn{
+    display: unset;
+  }
+  .extend-arrow{
+    height: 25px;
+    transform: rotate(90deg);
+  }
+  .name-extend{
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  .extend-btn{
+    cursor: pointer;
+    background: transparent;
+    border: none;
   }
 /*Stage 4: CSS of Event card mob view ending*/
