@@ -13,6 +13,20 @@ p{
 img{
     vertical-align: unset !important;
 }
+.page-loader{
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    background: #ffffff url('../page-loader.gif') no-repeat center center;
+    background-size: 20%;
+    z-index: 200;
+}
+.toppest-element{
+    position: absolute;
+    top: 0;
+}
 .landing_page{
     height:100vh;
 }
@@ -57,9 +71,7 @@ img{
 .navbar a{
     text-decoration: none;
     color:#EBEBEB;
-}
-.navbar a:hover{
-    color:#00AB07;
+    cursor: pointer;
 }
 .contact{
     border-radius: 5px;
@@ -156,7 +168,7 @@ img{
     font-family: Montserrat;
     font-style: normal;
     font-weight: 600;
-    font-size: 4vw;
+    font-size: 3.5vw;
     line-height: 67px;
     text-align: center;
     letter-spacing: 0.04em;
@@ -867,7 +879,6 @@ input:focus {
 .responsive-navbar a{
     text-decoration: none;
     color: black;
-
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 900;

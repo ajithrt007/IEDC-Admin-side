@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body id="theBody">
+    <div class="toppest-element"></div>
+    <div class="page-loader"></div>
     <div class="landing_page" id="home">
         <img src="../static/images/landing-image.svg" alt="" class="landing-image">
         <div class="iconset">
@@ -17,12 +19,12 @@
             <img src="../static/icons/sct-white.svg" alt="SCTCE icon" class="sct-logo">
         </div>
         <div class="navbar">
-            <a href="#home" class="nav-components">Home</a>
-            <a href="#about" class="nav-components">About</a>
-            <a href="#gallery" class="nav-components">Gallery</a>
+            <!-- <a href="#home" class="nav-components">Home</a> -->
+            <a class="nav-components" onclick="goToAbout()">About</a>
+            <a class="nav-components" onclick="goToGallery()">Gallery</a>
             <!-- <a href="#events" class="nav-components">Events</a> -->
             <a href="/events" class="nav-components">Events</a>
-            <a href="#team" class="nav-components">Team</a>
+            <a class="nav-components" onclick="goToTeam()">Team</a>
             <a href="mailto:iedc.sct@gmail.com" class="nav-components">
                 <div class="contact">
                     <p>Contact</p>
@@ -35,11 +37,11 @@
         <div class="responsive-navbar" id="menu">
             <div class="responsive">
                 <button class="close-button" id="close-btn" onclick="closeMenu()"><img src="../static/icons/close-icon.svg" alt="x" class="close-icon"></button>
-                <a href="#home" class="responsive-ptag" onclick="closeMenu()">Home</a>
-                <a href="#about" class="responsive-ptag" onclick="closeMenu()">About</a>
-                <a href="#gallery" class="responsive-ptag" onclick="closeMenu()">Gallery</a>
+                <!-- <a href="#home" class="responsive-ptag" onclick="closeMenu()">Home</a> -->
+                <a class="responsive-ptag" onclick="goToAbout()">About</a>
+                <a class="responsive-ptag" onclick="goToGallery()">Gallery</a>
                 <a href="/events" class="responsive-ptag" onclick="closeMenu()">Events</a>
-                <a href="#team" class="responsive-ptag" onclick="closeMenu()">Team</a>
+                <a class="responsive-ptag" onclick="goToTeam()">Team</a>
                 <a href="mailto:iedc.sct@gmail.com" class="contact-button" style="/*! width: 20vw; */padding: 0;display: flex;justify-content: center;">
                     <button type="button" class="btn btn-success" style="width: 37vw;height: 12vw;">Contact</button>
                 </a>
@@ -85,8 +87,7 @@
     <div class="aboutIEDC" id="about">
         <div class="titleAndContent">
             <div class="titleAndEditIcon">
-                <h2 class="aboutTitle">Vision</h2>
-                
+                <h2 class="aboutTitle">Vision</h2>                
             </div>
             <p class="aboutContent">To develop a knowledge ecosystem with required infrastructure that can enable students and faculty to innovate and prototype their potential ideas with support from government, industry and reputed academic institutions around the world and help them to realize their potentials.</p>
         </div>
@@ -422,11 +423,25 @@
                         </div>
                         <div class="teamMember">
                             <div class="photoName">
-                                <img src="../static/images/Members/Sabu V R.jpeg" alt="" class="teamMemberImg">
-                                <p class="teamMemberName">Sabu V R</p>
+                                <img src="../static/images/Members/Abhiram S.jpeg" alt="" class="teamMemberImg">
+                                <p class="teamMemberName">Abhiram S</p>
                             </div>
                             <div class="roleSocialMediaHandles">
-                                <p class="teamMemberRole">Nodal Officer</p>
+                                <p class="teamMemberRole">Chief Executive Officer</p>
+                                <div class="socialMediaHandles">
+                                    <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://instagram.com/_abhirxm_suresh_?igshid=YmMyMTA2M2Y="><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://www.linkedin.com/in/abhiram-s-5b0516190"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teamMember">
+                            <div class="photoName">
+                                <img src="../static/images/Members/Hiba shabu.jpg" alt="" class="teamMemberImg">
+                                <p class="teamMemberName">Hiba Shabu</p>
+                            </div>
+                            <div class="roleSocialMediaHandles">
+                                <p class="teamMemberRole">Chief Operating Officer</p>
                                 <div class="socialMediaHandles">
                                     <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
                                     <a href="#"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
@@ -436,11 +451,25 @@
                         </div>
                         <div class="teamMember">
                             <div class="photoName">
-                                <img src="../static/images/Members/Sabu V R.jpeg" alt="" class="teamMemberImg">
-                                <p class="teamMemberName">Sabu V R</p>
+                                <img src="../static/images/Members/Madhav Manoj Nair.jpg" alt="" class="teamMemberImg">
+                                <p class="teamMemberName">Madhav Manoj Nair</p>
                             </div>
                             <div class="roleSocialMediaHandles">
-                                <p class="teamMemberRole">Nodal Officer</p>
+                                <p class="teamMemberRole">Chief Finance Officer</p>
+                                <div class="socialMediaHandles">
+                                    <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://instagram.com/_.man.may._?igshid=YmMyMTA2M2Y="><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://www.linkedin.com/in/madhav-manoj-870500201"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teamMember">
+                            <div class="photoName">
+                                <img src="../static/images/Members/Jayalakshmi MA.jpg" alt="" class="teamMemberImg">
+                                <p class="teamMemberName">Jayalekshmi M A</p>
+                            </div>
+                            <div class="roleSocialMediaHandles">
+                                <p class="teamMemberRole">Chief Marketing Officer</p>
                                 <div class="socialMediaHandles">
                                     <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
                                     <a href="#"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
@@ -450,71 +479,43 @@
                         </div>
                         <div class="teamMember">
                             <div class="photoName">
-                                <img src="../static/images/Members/Sabu V R.jpeg" alt="" class="teamMemberImg">
-                                <p class="teamMemberName">Sabu V R</p>
+                                <img src="../static/images/Members/ANANDHU S.jpeg" alt="" class="teamMemberImg">
+                                <p class="teamMemberName">Anandhu S</p>
                             </div>
                             <div class="roleSocialMediaHandles">
-                                <p class="teamMemberRole">Nodal Officer</p>
+                                <p class="teamMemberRole">Chief Technical Officer</p>
                                 <div class="socialMediaHandles">
-                                    <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://www.facebook.com/anandhu.s.7798/"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://www.instagram.com/a_na_nd_hu_s/"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://www.linkedin.com/in/anandhu-s-2337661b7/"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
                                 </div>
                             </div>
                         </div>
                         <div class="teamMember">
                             <div class="photoName">
-                                <img src="../static/images/Members/Sabu V R.jpeg" alt="" class="teamMemberImg">
-                                <p class="teamMemberName">Sabu V R</p>
+                                <img src="../static/images/Members/Amrutha V.jpg" alt="" class="teamMemberImg">
+                                <p class="teamMemberName">Amrutha V</p>
                             </div>
                             <div class="roleSocialMediaHandles">
-                                <p class="teamMemberRole">Nodal Officer</p>
+                                <p class="teamMemberRole">Chief Social Officer</p>
                                 <div class="socialMediaHandles">
                                     <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://instagram.com/_ahturma_?igshid=YmMyMTA2M2Y="><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://www.linkedin.com/in/amrutha-v-786394195"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
                                 </div>
                             </div>
                         </div>
                         <div class="teamMember">
                             <div class="photoName">
-                                <img src="../static/images/Members/Sabu V R.jpeg" alt="" class="teamMemberImg">
-                                <p class="teamMemberName">Sabu V R</p>
+                                <img src="../static/images/Members/Roshni G.jpg" alt="" class="teamMemberImg">
+                                <p class="teamMemberName">Roshni G</p>
                             </div>
                             <div class="roleSocialMediaHandles">
-                                <p class="teamMemberRole">Nodal Officer</p>
+                                <p class="teamMemberRole">Chief Creative Officer</p>
                                 <div class="socialMediaHandles">
-                                    <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamMember">
-                            <div class="photoName">
-                                <img src="../static/images/Members/Sabu V R.jpeg" alt="" class="teamMemberImg">
-                                <p class="teamMemberName">Sabu V R</p>
-                            </div>
-                            <div class="roleSocialMediaHandles">
-                                <p class="teamMemberRole">Nodal Officer</p>
-                                <div class="socialMediaHandles">
-                                    <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamMember">
-                            <div class="photoName">
-                                <img src="../static/images/Members/Sabu V R.jpeg" alt="" class="teamMemberImg">
-                                <p class="teamMemberName">Sabu V R</p>
-                            </div>
-                            <div class="roleSocialMediaHandles">
-                                <p class="teamMemberRole">Nodal Officer</p>
-                                <div class="socialMediaHandles">
-                                    <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://www.facebook.com/roshni.prakash.1840"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://www.instagram.com/invites/contact/?i=mvlwjwo9phxs&utm_content=3enyo3d"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://www.linkedin.com/in/roshni-g-493028213"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
                                 </div>
                             </div>
                         </div>
@@ -526,11 +527,25 @@
                     <div class="membersContainer">
                         <div class="teamMember">
                             <div class="photoName">
-                                <img src="../static/images/Members/Sabu V R.jpeg" alt="" class="teamMemberImg">
-                                <p class="teamMemberName">Sabu V R</p>
+                                <img src="../static/images/Members/Bhagya.jpg" alt="" class="teamMemberImg">
+                                <p class="teamMemberName">Bhagyalekshmi U</p>
                             </div>
                             <div class="roleSocialMediaHandles">
-                                <p class="teamMemberRole">Nodal Officer</p>
+                                <p class="teamMemberRole">Content Lead</p>
+                                <div class="socialMediaHandles">
+                                    <a href="https://www.facebook.com/profile.php?id=100011649462576"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://www.instagram.com/invites/contact/?i=1k0z1rhd4iijh&utm_content=23k5xt7"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://www.linkedin.com/in/bhagya-lekshmi-u-3541blu"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teamMember">
+                            <div class="photoName">
+                                <img src="../static/images/Members/Abhishek K.jpg" alt="" class="teamMemberImg">
+                                <p class="teamMemberName">Abhishek K</p>
+                            </div>
+                            <div class="roleSocialMediaHandles">
+                                <p class="teamMemberRole">Design Lead</p>
                                 <div class="socialMediaHandles">
                                     <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
                                     <a href="#"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
@@ -539,6 +554,50 @@
                             </div>
                         </div>
                         <div class="teamMember">
+                            <div class="photoName">
+                                <img src="../static/images/Members/Anugraha Vincent.jpg" alt="" class="teamMemberImg">
+                                <p class="teamMemberName">Anugraha Vincent</p>
+                            </div>
+                            <div class="roleSocialMediaHandles">
+                                <p class="teamMemberRole">Marketing Lead</p>
+                                <div class="socialMediaHandles">
+                                    <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://instagram.com/anugrahavincent?igshid=YmMyMTA2M2Y="><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://www.linkedin.com/in/anugraha-vincent-167392219"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="membersContainer">
+                        <div class="teamMember">
+                            <div class="photoName">
+                                <img src="../static/images/Members/Ajith R T.jpg" alt="" class="teamMemberImg">
+                                <p class="teamMemberName">Ajith R T</p>
+                            </div>
+                            <div class="roleSocialMediaHandles">
+                                <p class="teamMemberRole">Technical Lead</p>
+                                <div class="socialMediaHandles">
+                                    <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://www.instagram.com/_ajith_rt_/"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="https://www.linkedin.com/in/ajith-rt-3758a41a5/"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="teamMember">
+                            <div class="photoName">
+                                <img src="../static/images/Members/Sabu V R.jpeg" alt="" class="teamMemberImg">
+                                <p class="teamMemberName">Akshay V</p>
+                            </div>
+                            <div class="roleSocialMediaHandles">
+                                <p class="teamMemberRole">Volunteering Lead</p>
+                                <div class="socialMediaHandles">
+                                    <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="#"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                    <a href="#"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="teamMember">
                             <div class="photoName">
                                 <img src="../static/images/Members/Sabu V R.jpeg" alt="" class="teamMemberImg">
                                 <p class="teamMemberName">Sabu V R</p>
@@ -579,63 +638,7 @@
                                     <a href="#"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="teamMember">
-                            <div class="photoName">
-                                <img src="../static/images/Members/Sabu V R.jpeg" alt="" class="teamMemberImg">
-                                <p class="teamMemberName">Sabu V R</p>
-                            </div>
-                            <div class="roleSocialMediaHandles">
-                                <p class="teamMemberRole">Nodal Officer</p>
-                                <div class="socialMediaHandles">
-                                    <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamMember">
-                            <div class="photoName">
-                                <img src="../static/images/Members/Sabu V R.jpeg" alt="" class="teamMemberImg">
-                                <p class="teamMemberName">Sabu V R</p>
-                            </div>
-                            <div class="roleSocialMediaHandles">
-                                <p class="teamMemberRole">Nodal Officer</p>
-                                <div class="socialMediaHandles">
-                                    <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamMember">
-                            <div class="photoName">
-                                <img src="../static/images/Members/Sabu V R.jpeg" alt="" class="teamMemberImg">
-                                <p class="teamMemberName">Sabu V R</p>
-                            </div>
-                            <div class="roleSocialMediaHandles">
-                                <p class="teamMemberRole">Nodal Officer</p>
-                                <div class="socialMediaHandles">
-                                    <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="teamMember">
-                            <div class="photoName">
-                                <img src="../static/images/Members/Sabu V R.jpeg" alt="" class="teamMemberImg">
-                                <p class="teamMemberName">Sabu V R</p>
-                            </div>
-                            <div class="roleSocialMediaHandles">
-                                <p class="teamMemberRole">Nodal Officer</p>
-                                <div class="socialMediaHandles">
-                                    <a href="#"><img src="../static/icons/fb-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/insta-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                    <a href="#"><img src="../static/icons/linkedin-teamMember.svg" alt="" class="memberSocialMediaIcon"></a>
-                                </div>
-                            </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
               </div>
@@ -653,11 +656,9 @@
     <div class="contactSection">
         <div class="contactHeader">
             <p class="headline contactTitle">Get in Touch !!</p>
-            <a href="#home">
-                <button class="edit-icon" class="scrollTop_top" id="scrollToTop">
-                    <img src="../static/icons/up-arrow.svg" alt="" class="pen">
-                </button>
-            </a>
+            <button class="edit-icon" class="scrollTop_top" id="scrollToTop" onclick="goToTop()">
+                <img src="../static/icons/up-arrow.svg" alt="" class="pen">
+            </button>
         </div>
         <div class="subSection">
             <div class="leftSection">
@@ -688,7 +689,8 @@
         <p class="footerText">© Copyright IEDC SCTCE. All Rights Reserved</p>
     </div>
     <script src="../static/js/navBar.js"></script>
-    <script src="../static/js/scrollTop.js"></script>
+    <script src="../static/js/preloader.js"></script>
+    <script src="../static/js/scrollToPosition.js"></script>
     <script src="../static/js/waypointsMin.js"></script>
     <script src="../static/js/counterUpMin.js"></script>
     <script src="../static/js/gallerySlider.js"></script>
