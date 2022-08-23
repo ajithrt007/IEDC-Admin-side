@@ -5,7 +5,7 @@ const goToTop = () => {
 };
 
 
-//back-to-top button 
+//go to about section code
 const about = document.querySelector("#about");
 const goToAbout = () => {
     about.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
@@ -13,7 +13,7 @@ const goToAbout = () => {
 };
 
 
-//back-to-top button 
+//go to gallery section code 
 const gallery = document.querySelector("#gallery");
 const goToGallery = () => {
     gallery.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
@@ -21,9 +21,17 @@ const goToGallery = () => {
 };
 
 
-//back-to-top button 
+//go to teams section code
 const team = document.querySelector(".team");
 const goToTeam = () => {
     team.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+    closeMenu();
+};
+
+
+//go to events section code
+const events = document.querySelector("#events");
+const goToEvents = () => {
+    events.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
     closeMenu();
 };
