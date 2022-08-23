@@ -6,6 +6,7 @@
 body{
     background: #EBEBEB;
     overflow-x: hidden;
+    overflow-y: unset;
 }
 p{
     margin-bottom:unset !important;
@@ -1174,3 +1175,4 @@ input:focus {
     width: 100vw;
 }
 /* Gallery slider end */
+
