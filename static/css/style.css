@@ -1073,6 +1073,7 @@ input:focus {
     }
     .controls {
         gap: 35px;
+        display: none;
     }
     .control img {
         height: 26px;
