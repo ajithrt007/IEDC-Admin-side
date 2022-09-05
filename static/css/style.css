@@ -391,13 +391,38 @@ button:focus {
     cursor: grab;
 }
 .carousel1::-webkit-scrollbar {
-    display: none;
+    height: 5px;
+    border-radius: 5px;
 }
-/* Hide scrollbar for IE, Edge and Firefox */
-.carousel1 {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+.carousel1::-webkit-scrollbar:hover {
+    height: 8px;
 }
+.carousel1::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 5px;
+}
+.carousel1::-webkit-scrollbar-thumb {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 5px;
+}
+::-webkit-scrollbar:hover {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb {
+    width: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
 .controls{
     display: flex;
     align-items: center;
@@ -427,6 +452,7 @@ button:focus {
 .events-section{
     margin-top: 3%;
     margin-left: 5vw;
+    padding-bottom:3%;
 }
 .nav-tabs{
     border-bottom: none;
@@ -468,19 +494,35 @@ button:focus {
     width: 90vw;
     overflow-x: scroll;
     overflow-y: hidden;
+    cursor: grab;
 }
 .eventCarousel{
     display: flex;
     align-items: center;
     gap:15px;
 }
-.event::-webkit-scrollbar {
+/* .event::-webkit-scrollbar {
     display: none;
 }
-/* Hide scrollbar for IE, Edge and Firefox */
 .event {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */
+.event::-webkit-scrollbar {
+    height: 5px;
+    border-radius: 5px;
+}
+.event::-webkit-scrollbar:hover {
+    height: 8px;
+}
+.event::-webkit-scrollbar-track {
+    background: black;
+    border-radius: 5px;
+}
+.event::-webkit-scrollbar-thumb {
+    height: 3px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
 }
 .eventCard{
     display: inline;
@@ -519,58 +561,6 @@ button:focus {
 .rtl{
     flex-direction: row-reverse;
 }
-.lastEvent{
-    padding-bottom:3%;
-}
-/* Cutom modal css start */
-.customModal{
-    background: white;
-    height:70vh;
-    max-width:70vw;
-    padding:0;
-    margin: 15vh auto;
-    padding: 0 !important;
-}
-.eventPoster{
-    width:50%;
-}
-.rightleft{
-    display: flex;
-    overflow-y: hidden;
-}
-.leftContents{
-    height: 70vh;
-}
-.eventPoster{
-    height:100%;
-    width:auto;
-}
-.rightContents{
-    width:100%;
-}
-.infoViewTitle{
-    max-width: 249px;
-}
-.infoViewCloseBtn{
-    margin: -1rem -1rem -1rem 15px;
-}
-.modalBodyContent{
-    color:black;
-    font-size: 14px;
-    font-family: 'Montserrat';
-}
-.infoViewRightBody{
-    height: calc(70vh - 63px - 75px);
-    overflow-y: scroll;
-}
-.eventInfoViewFooter{
-    display: flex;
-    justify-content: space-between;
-}
-.eventDeadline{
-    font-weight: 600;
-}
-/* Cutom modal css end */
 .slides{    
     width:100vw;
     /* height:100vh; */
@@ -934,6 +924,9 @@ input:focus {
 .white-space{
     display: none;
 }
+.controls{
+    display: none;
+}
 @media screen and (max-width: 1300px) {
     body{
         overflow-x: hidden;
@@ -960,11 +953,49 @@ input:focus {
     .l-shape{
         display: none;
     }
+    .teamsSlide1{
+        margin: 3%;
+        display: unset;
+    }
+    .teamGroupImg{
+        height: 30vh;
+    }
+    .controls{
+        display: none;
+    }
+    .carousel1::-webkit-scrollbar {
+        display: none;
+    }
+    .carousel1 {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    } 
+    .event::-webkit-scrollbar {
+        display: none;
+    }
+    .event {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    } 
 }
 @media screen and (max-width: 600px) {
     body{
         overflow-x: hidden;
     }
+    .carousel1::-webkit-scrollbar {
+        display: none;
+    }
+    .carousel1 {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    } 
+    .event::-webkit-scrollbar {
+        display: none;
+    }
+    .event {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    } 
     .arrow-mob-view{
         display: block;
     }
@@ -993,6 +1024,7 @@ input:focus {
         padding-left: 25vw;
         width: 100vw;
         overflow-x: scroll;
+        padding-right: 4vw;
     }
      /* Hide scrollbar for Chrome, Safari and Opera */
     .numerical_data::-webkit-scrollbar {
@@ -1139,8 +1171,8 @@ input:focus {
         justify-content: center;
     }
     .typeofEVent {
-        font-size: 25px;
-        min-width: 192px;
+        font-size: 23px;
+        min-width: 172px;
     }
     .eventCarousel {
         display: flex;
