@@ -128,6 +128,10 @@ def home():
 @app.route("/events")
 def events():
     return render_template("event-details.html")
+
+@app.route("/game")
+def game():
+    return render_template("game.html")
 """
 @app.route("/admin")
 @login_required
