@@ -2,6 +2,7 @@
 var gameOff = 0;
 const className = document.querySelector('.classnamePara').innerHTML;
 function sender(score){
+    //console.log('njan dhe senduane');
     fetch('/score?class=' + className + '&score=' + score).then(function (response)
     {
         return response.json();
@@ -15,7 +16,7 @@ function chambikko(){
         const gameOverStyles = window.getComputedStyle(gameOver); 
         const gameOverOpacity = gameOverStyles.getPropertyValue('opacity');
         if (gameOverOpacity == "1"){
-            console.log('game score =' + document.querySelector('#score').innerHTML);
+            //console.log('game score =' + document.querySelector('#score').innerHTML);
             sender(document.querySelector('#score').innerHTML);
             stopIt();
         }
@@ -24,13 +25,13 @@ function chambikko(){
         clearInterval(intervalid);
         gameOff = 1;
         window.addEventListener("keydown",function(e){
-            // console.log("spacekey listen cheyth");
-            if(e.key = " " && gameOff == 1){
+            //console.log("spacekey listen cheyth");
+            if(e.key === " " && gameOff == 1){
                 chambikko();
             }
         });
         window.addEventListener("click",function(e){
-            // console.log("click listen cheyth");
+            //console.log("click listen cheyth");
             if(gameOff == 1){
                 chambikko();
             }
@@ -38,5 +39,3 @@ function chambikko(){
     }
 }
 chambikko();
-
-
