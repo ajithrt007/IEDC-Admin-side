@@ -9,10 +9,14 @@ classes = ['R2A', 'R2B', 'R4A', 'R4B', 'R6', 'T2A', 'T2B', 'T4A', 'T4B', 'T6A', 
 @app.route("/")
 def home():
     increase_visitorcount(mongodb_client)
-    sorted_records = desc_sorted_classnames(mongodb_client).limit(24)
+    sorted_records = desc_sorted_classnames(mongodb_client).limit(5)
+    data = []
     for record in sorted_records:
-        print("Class name:", record["Class"], " and score:", record["Score"])
-    return render_template("user.html")
+        tempdict = {}
+        tempdict["Class"] = record["Class"]
+        tempdict["Score"] = record["Score"] 
+        data.append(tempdict)
+    return render_template("user.html", sorted_records = data)
 
 @app.route("/intermediate")
 def interm():
@@ -47,4 +51,4 @@ def addscore():
 if __name__ == "__main__":
     #mongodb_client = connect_to_mongodb("mongodb+srv://anandhus:anandhu%40mongo@cluster0.lzunamf.mongodb.net/?retryWrites=true&w=majority")
     #classes = ['R2A', 'R2B', 'R4A', 'R4B', 'R6', 'T2A', 'T2B', 'T4A', 'T4B', 'T6A', 'T6B', 'M2A', 'M2B', 'M4A', 'M4B', 'M6', 'B2', 'B4', 'B6', 'P4', 'P6', 'U2', 'U4', 'U6', 'other']
-    app.run(host='0.0.0.0', port=8080)
+    app.run(debug=False, host='0.0.0.0', port="8080")
