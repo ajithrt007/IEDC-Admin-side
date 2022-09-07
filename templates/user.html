@@ -591,28 +591,21 @@
             <div class="game-right-part">
                 <p class="leaderboard">Leaderboard</p>
                 <div class="leaders">
+                    {% for record in sorted_records %}
+                    {% if loop.index == 1 %}
                     <div class="leader first">
                         <p class="leader-number">1</p>
-                        <p class="leader-name">R4A</p>
-                        <p class="leader-point">532</p>
+                        <p class="leader-name">{{record["Class"]}}</p>
+                        <p class="leader-point">{{record["Score"]}}</p>
                     </div>
+                    {% else %}
                     <div class="leader">
-                        <p class="leader-number">1</p>
-                        <p class="leader-name">R4A</p>
-                        <p class="leader-point">532</p>
-                    </div><div class="leader">
-                        <p class="leader-number">1</p>
-                        <p class="leader-name">R4A</p>
-                        <p class="leader-point">532</p>
-                    </div><div class="leader">
-                        <p class="leader-number">1</p>
-                        <p class="leader-name">R4A</p>
-                        <p class="leader-point">532</p>
-                    </div><div class="leader">
-                        <p class="leader-number">1</p>
-                        <p class="leader-name">R4A</p>
-                        <p class="leader-point">532</p>
+                        <p class="leader-number">{{loop.index}}</p>
+                        <p class="leader-name">{{record["Class"]}}</p>
+                        <p class="leader-point">{{record["Score"]}}</p>
                     </div>
+                    {% endif %}
+                    {% endfor %}
                 </div>
             </div>
         </div>

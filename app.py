@@ -9,7 +9,14 @@ classes = ['R2A', 'R2B', 'R4A', 'R4B', 'R6', 'T2A', 'T2B', 'T4A', 'T4B', 'T6A', 
 @app.route("/")
 def home():
     increase_visitorcount(mongodb_client)
-    return render_template("user.html")
+    sorted_records = desc_sorted_classnames(mongodb_client).limit(5)
+    data = []
+    for record in sorted_records:
+        tempdict = {}
+        tempdict["Class"] = record["Class"]
+        tempdict["Score"] = record["Score"] 
+        data.append(tempdict)
+    return render_template("user.html", sorted_records = data)
 
 @app.route("/intermediate")
 def interm():
@@ -34,6 +41,8 @@ def game(classname):
 @app.route("/score")
 def addscore():
     class_name = request.args.get('class')
+    if class_name == "other":
+        return jsonify({"status":"success"})
     score = int(request.args.get('score'))
     add_class_score(mongodb_client, class_name, score)
     return jsonify({"status":"success"})
