@@ -1206,9 +1206,122 @@ input:focus {
         width: unset;
     }
 }
-/* gallery slider start */
-.carouselContaier{
-    width: 100vw;
-}
-/* Gallery slider end */
 
+
+/*Game Section*/
+.game-section{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.game-bg{
+    height: 100vh;
+    width: 105vw;
+    position: absolute;
+    z-index: -12;
+}
+.game-section-left-right{
+    display: flex;
+    flex-direction: row;
+    margin-left: 5vw;
+    padding-top: 5vh;
+    margin-right: 5vw;
+    justify-content: space-between;
+}
+.game-left-part, .game-right-part{
+    display: flex;
+    flex-direction: column;    
+}
+.game-left-part{
+    gap: 25px;
+}
+.game-name{
+    height: 10vh;
+    width: 29vw;
+}
+.presents{
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    font-family: 'Montserrat';
+}
+.iedc-sctce{
+    font-weight: 650;
+    font-size: 32px;
+}
+.present{
+    font-weight: 500;
+    font-size: 25px;
+}
+.play-game{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: none;
+    width: 130px;
+    background: white;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    margin-top: 8vh;
+}
+.game-guidelines{
+    font-family: 'Montserrat';
+    font-weight: 500;   
+    letter-spacing: 0.3px;
+    margin-top: 8vh;
+    font-size: 19px;
+}
+.game-right-part{
+    margin-right: 4vw;
+}
+.leaderboard{
+    color: white;
+    font-weight: 600;
+    font-size: 28px;
+    margin-top: 8vh;
+}
+.leaders{
+    display: flex;
+    flex-direction: column;
+    gap: 3.5vh;
+    margin-top: 8vh;
+}
+.leader{
+    background: linear-gradient(269.39deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.15) 100%);
+    backdrop-filter: blur(12px);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+/*     border-image-source: linear-gradient(269.39deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.3) 100%); */
+    display: flex;
+    gap: 10vw;
+    padding: 16px 48px;
+    font-family: 'Montserrat';    
+    align-items: center;
+    /*! width: 600px; */
+    justify-content: center;
+}
+.leader-name, .leader-point{
+    color: #004751;
+    font-size: 22px;
+    font-weight: 600;
+    width: 90px;
+    max-width: 90px;
+}
+.leader-number{
+    color: #004751;
+    font-size: 20px;
+    font-weight: 600;
+    background: white;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;    
+}
+.first{
+    border: 8px solid rgba(255, 214, 68, 1);
+}
