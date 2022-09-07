@@ -1,7 +1,8 @@
 //function to find game score and put it in console
 var gameOff = 0;
+const className = document.querySelector('.classnamePara').innerHTML;
 function sender(score){
-    fetch('/score?class={{classname}}&score=' + score).then(function (response)
+    fetch('/score?class=' + className + '&score=' + score).then(function (response)
     {
         return response.json();
     });
