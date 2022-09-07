@@ -490,11 +490,14 @@ button:focus {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-top: 3%;
+    margin-top: 5%;
     width: 90vw;
     overflow-x: scroll;
     overflow-y: hidden;
     cursor: grab;
+}
+.lastEvent{
+    margin-bottom: 5%;
 }
 .eventCarousel{
     display: flex;
@@ -563,7 +566,7 @@ button:focus {
 }
 .slides{    
     width:100vw;
-    /* height:100vh; */
+    height:100vh;
     background: #EBEBEB;
 }
 .teamsSlide1{
