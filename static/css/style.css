@@ -1282,7 +1282,6 @@ input:focus {
 }
 .game-right-part{
     margin-right: 4vw;
-    display: none;
 }
 .leaderboard{
     color: white;
