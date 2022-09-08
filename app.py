@@ -45,6 +45,9 @@ def addscore():
         return jsonify({"status":"success"})
     score = int(request.args.get('score'))
     add_class_score(mongodb_client, class_name, score)
+    file = open("log.txt","a")
+    file.write(class_name+":"+score+"\n")
+    file.close()
     return jsonify({"status":"success"})
 
 
