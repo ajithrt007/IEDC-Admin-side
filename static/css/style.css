@@ -1266,6 +1266,12 @@ input:focus {
     font-family: 'Montserrat';
     font-weight: 500;
     margin-top: 8vh;
+    text-decoration: none;
+    color: black;
+}
+.play-game:hover{
+    text-decoration: none;
+    color: black;
 }
 .game-guidelines{
     font-family: 'Montserrat';
@@ -1330,7 +1336,7 @@ input:focus {
         margin-right: 0;
     }
     .leader{
-        padding: 16px 30px;
+        padding: 8px 30px;
     }
 }
 @media screen and (max-width: 1000px){

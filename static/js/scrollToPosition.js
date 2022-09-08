@@ -35,3 +35,11 @@ const goToEvents = () => {
     events.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
     closeMenu();
 };
+
+
+//go to game section code
+const game = document.querySelector("#game");
+const goToGame = () => {
+    game.scrollIntoView({behavior: "smooth", block: "start", inline: "start"});
+    closeMenu();
+};

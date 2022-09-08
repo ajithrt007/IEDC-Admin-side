@@ -31,7 +31,7 @@
             <!-- <a href="#events" class="nav-components">Events</a> -->
             <a onclick="goToEvents()" class="nav-components">Events</a>
             <a class="nav-components" onclick="goToTeam()">Team</a>
-            <a class="nav-components" href="/intermediate">Game</a>
+            <a class="nav-components" onclick="goToGame()">Game</a>
             <a href="mailto:iedc.sct@gmail.com" class="nav-components">
                 <div class="contact">
                     <p>Contact</p>
@@ -49,7 +49,7 @@
                 <a class="responsive-ptag" onclick="goToGallery()">Gallery</a>
                 <a onclick="goToEvents()" class="responsive-ptag" onclick="closeMenu()">Events</a>
                 <a class="responsive-ptag" onclick="goToTeam()">Team</a>
-                <a class="responsive-ptag" href="/game">Game</a>
+                <a class="responsive-ptag" onclick="goToGame()">Game</a>
                 <a href="mailto:iedc.sct@gmail.com" class="contact-button" style="/*! width: 20vw; */padding: 0;display: flex;justify-content: center;">
                     <button type="button" class="btn btn-success" style="width: 37vw;height: 12vw;">Contact</button>
                 </a>
@@ -576,8 +576,8 @@
             </a>
         </div>
     </div>
-    <div class="game-section">
-        <img src="../static/images/Layer 1upstack.svg" alt="" class="game-bg">
+    <div class="game-section" id="game">
+        <img src="../static/images/Layer1upstack.svg" alt="" class="game-bg">
         <div class="game-section-left-right">
             <div class="game-left-part">
                 <div class="presents">
@@ -585,7 +585,7 @@
                     <p class="present">presents</p>
                 </div>
                 <img src="../static/images/UPSTACKupstack.png" alt="upstack" class="game-name">
-                <button class="play-game">play game</button>
+                <a href="/intermediate" class="play-game">play game</a>
                 <p class="game-guidelines">Guidelines evde kanappedum</p>
             </div>
             <div class="game-right-part">

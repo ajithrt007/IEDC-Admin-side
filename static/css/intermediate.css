@@ -51,3 +51,8 @@ body{
     font-size: 15px;
     font-weight: 450;
 }
+.back-btn{
+    top: 20px;
+    left: 20px;
+    position: absolute;
+}
