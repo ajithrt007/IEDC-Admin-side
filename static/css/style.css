@@ -1235,9 +1235,8 @@ input:focus {
 .game-left-part{
     gap: 25px;
 }
-.game-name{
+.game-name img{
     height: 10vh;
-    width: 400px;
 }
 .presents{
     color: white;
@@ -1354,6 +1353,10 @@ input:focus {
     .game-section-left-right{
         flex-direction: column;
     }
+    .game-section{
+        height: unset;
+        padding-bottom: 4vh;
+    }
     .play-game{
         margin-top: 2vh;
     }
@@ -1369,6 +1372,9 @@ input:focus {
     }
     .leader{
         width: 70vw;
+    }
+    .game-guidelines{
+        max-width: unset;
     }
 }
 @media screen and (max-width: 500px){
