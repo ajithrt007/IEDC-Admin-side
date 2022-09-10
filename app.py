@@ -40,7 +40,7 @@ def game(classname):
 
 @app.route("/score")
 def addscore():
-    # class_name = request.args.get('class')
+    class_name = request.args.get('class')
     # if class_name == "other":
     #     return jsonify({"status":"success"})
     # score = int(request.args.get('score'))
@@ -49,6 +49,9 @@ def addscore():
     # file.write(class_name+":"+score+"\n")
     # file.close()
     # return jsonify({"status":"success"})
+    ip_addr = request.remote_addr
+    file = open('ipaddress.txt', 'a')
+    file.write("ip address:" + ip_addr+ " class:"+class_name+"\n")
     return render_template("error-page.html", moonjikko = 1)
 
 if __name__ == "__main__":
