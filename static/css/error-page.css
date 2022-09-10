@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+body{
+    margin: 0;
+}
+.theBody{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.theBody h2{
+    text-align: center;
+}

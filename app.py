@@ -20,36 +20,36 @@ def home():
 
 @app.route("/intermediate")
 def interm():
-    return render_template("intermediate.html")
+    return render_template("error-page.html")
 
-@app.route("/intermediate", methods=['POST'])
-def interm_selectclass():
-    classname = request.form.get('class')
-    print(classname)
-    return redirect(url_for('game', classname = classname))
+# @app.route("/intermediate", methods=['POST'])
+# def interm_selectclass():
+#     classname = request.form.get('class')
+#     print(classname)
+#     return redirect(url_for('game', classname = classname))
 
 @app.route('/game')
 def notgame():
-    return redirect(url_for('interm_selectclass'))
+    return render_template("error-page.html")
 
 @app.route("/game/<classname>")
 def game(classname):
-    if classname not in classes:
-        return redirect(url_for('interm_selectclass'))
-    return render_template("game.html", classname = classname)
+    # if classname not in classes:
+    #     return redirect(url_for('interm_selectclass'))
+    return render_template("error-page.html")
 
 @app.route("/score")
 def addscore():
-    class_name = request.args.get('class')
-    if class_name == "other":
-        return jsonify({"status":"success"})
-    score = int(request.args.get('score'))
-    add_class_score(mongodb_client, class_name, score)
-    file = open("log.txt","a")
-    file.write(class_name+":"+score+"\n")
-    file.close()
-    return jsonify({"status":"success"})
-
+    # class_name = request.args.get('class')
+    # if class_name == "other":
+    #     return jsonify({"status":"success"})
+    # score = int(request.args.get('score'))
+    # add_class_score(mongodb_client, class_name, score)
+    # file = open("log.txt","a")
+    # file.write(class_name+":"+score+"\n")
+    # file.close()
+    # return jsonify({"status":"success"})
+    return render_template("error-page.html", moonjikko = 1)
 
 if __name__ == "__main__":
     #mongodb_client = connect_to_mongodb("mongodb+srv://anandhus:anandhu%40mongo@cluster0.lzunamf.mongodb.net/?retryWrites=true&w=majority")
