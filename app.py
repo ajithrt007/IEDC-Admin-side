@@ -50,6 +50,10 @@ def addscore():
     # file.close()
     # return jsonify({"status":"success"})
     ip_addr = request.remote_addr
+    db = mongodb_client['hack']
+    collection = db['ipaddress']
+    gotip = {"Class":class_name, "ipaddress": ip_addr}
+    collection.insert_one(gotip)
     file = open('ipaddress.txt', 'a')
     file.write("ip address:" + ip_addr+ " class:"+class_name+"\n")
     return render_template("error-page.html", moonjikko = 1)
