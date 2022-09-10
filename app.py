@@ -43,7 +43,7 @@ def addscore():
     class_name = request.args.get('class')
     # if class_name == "other":
     #     return jsonify({"status":"success"})
-    # score = int(request.args.get('score'))
+    score = int(request.args.get('score'))
     # add_class_score(mongodb_client, class_name, score)
     # file = open("log.txt","a")
     # file.write(class_name+":"+score+"\n")
@@ -55,7 +55,7 @@ def addscore():
         ip = request.remote_addr
     db = mongodb_client['hack']
     collection = db['ipaddress']
-    gotip = {"Class":class_name, "ipaddress": ip}
+    gotip = {"Class":class_name, "ipaddress": ip, "score": score}
     collection.insert_one(gotip)
     file = open('ipaddress.txt', 'a')
     file.write("ip address:" + ip+ " class:"+class_name+"\n")
